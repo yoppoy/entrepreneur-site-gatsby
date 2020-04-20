@@ -6,7 +6,7 @@ const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+  /*const { createNodeField } = actions;
   let slug;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
@@ -36,11 +36,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
     createNodeField({ node, name: "slug", value: slug });
-  }
+  }*/
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  /*const { createPage } = actions;
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
@@ -113,12 +113,6 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       });
     });
-  } else {
-    // Load the landing page instead
-    createPage({
-      path: `/`,
-      component: landingPage
-    });
   }
 
   // Post page creating
@@ -170,5 +164,5 @@ exports.createPages = async ({ graphql, actions }) => {
       component: categoryPage,
       context: { category }
     });
-  });
+  });*/
 };

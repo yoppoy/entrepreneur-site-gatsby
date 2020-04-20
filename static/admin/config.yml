@@ -7,16 +7,39 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: timeline-event
-    label: "Post"
-    folder: "content"
-    create: true
+  - label: "Languages"
+    name: "languages"
+    folder: "content/languages"
+    extension: "yml"
+    format: "yml"
+    create: false
+    slug: "{{code}}"
+    editor:
+      preview: false
     fields:
+      - { label: "Language", name: "language" , widget: string}
+      - { label: "Country Code (for url)", name: "code" , widget: string}
+  - label: "Experiences"
+    name: "experiences"
+    folder: "content/experiences"
+    create: true
+    slug: "{{employerName}}-{{year}}.{{en}}"
+    fields:
+      - {
+        label: "Language",
+        name: "language",
+        widget: "relation",
+        collection: "languages",
+        searchFields: ["language"],
+        valueField: "code",
+        displayFields: ["language"],
+        default: "fr"
+      }
       - { label: "Contract Type", name: "type", widget: "string" }
       - { label: "Contract title", name: "title", widget: "string" }
-      - { label: "Contract Description", name: "descrition", widget: "list" }
-      - { label: "Start Date", name: "date", widget: "datetime" }
-      - { label: "End Date", name: "date", widget: "datetime" }
+      - { label: "Contract Description", name: "description", widget: "markdown" }
+      - { label: "Start Date", name: "dateStart", widget: "datetime" }
+      - { label: "End Date", name: "dateEnd", widget: "datetime" }
       - { label: "Employer Name", name: "employerName", widget: "string" }
       - { label: "Employer Logo", name: "employerLogo", widget: "image" }
       - { label: "Devicons", name: "icons", widget: "list" }
