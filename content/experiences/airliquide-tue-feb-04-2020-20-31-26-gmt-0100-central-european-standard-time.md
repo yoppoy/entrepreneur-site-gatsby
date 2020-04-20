@@ -5,6 +5,8 @@ title: Fullstack
 description: >-
   Développement de l'entiéreté d'une solution B2B comprenant une application
   mobile, un Back End et un Back Office.
+  
+  
   * Application mobile en **React Native**
   * Back End en **NodeJS** avec tests unitaires en **Chai.js**
   * Back Office en **ReactJS**

@@ -23,7 +23,7 @@ collections:
     name: "experiences"
     folder: "content/experiences"
     create: true
-    slug: "{{employerName}}-{{year}}.{{en}}"
+    slug: "{{employerName}}-{{year}}.{{language}}"
     fields:
       - {
         label: "Language",
@@ -43,3 +43,24 @@ collections:
       - { label: "Employer Name", name: "employerName", widget: "string" }
       - { label: "Employer Logo", name: "employerLogo", widget: "image" }
       - { label: "Devicons", name: "icons", widget: "list" }
+  - label: "Testimonies"
+    name: "testimonies"
+    folder: "content/testimonies"
+    create: true
+    slug: "{{company}}-{{fullName}}.{{language}}"
+    fields:
+      - {
+        label: "Language",
+        name: "language",
+        widget: "relation",
+        collection: "languages",
+        searchFields: ["language"],
+        valueField: "code",
+        displayFields: ["language"],
+        default: "fr"
+      }
+      - { label: "Full Name", name: "fullName", widget: "string" }
+      - { label: "Testimony", name: "testimony", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Company", name: "company", widget: "string" }
+      - { label: "Job Title", name: "job", widget: "string" }
