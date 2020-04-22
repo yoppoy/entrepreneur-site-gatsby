@@ -5,7 +5,6 @@ import SEO from "../components/SEO/SEO";
 import ExperienceListing from "../components/Timeline/ExperienceListing";
 
 export default function HomePage({data}) {
-    console.log("DATA : ", data);
     const experienceEdges = data.allContentfulExperience.edges;
     const testimonyEdges = data.allContentfulTestimony.edges;
 

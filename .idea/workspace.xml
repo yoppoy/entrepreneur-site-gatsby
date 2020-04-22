@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SEO/SEO.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SEO/SEO.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587548637798</updated>
-      <workItem from="1587548638841" duration="18593000" />
+      <workItem from="1587548638841" duration="18914000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587576383529</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add (codebase refactor)">
+      <created>1587576547594</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587576547594</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

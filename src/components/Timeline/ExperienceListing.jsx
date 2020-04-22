@@ -27,9 +27,8 @@ export default function ExperienceListing({ExperienceEdges}) {
             <Timeline>
                 <TimelineContainer>
                     {ExperienceEdges.map((Experience, index) => {
-                        console.log("---> ", Experience.node.icons.data);
                         return (
-                            <TimelineItem>
+                            <TimelineItem key={Experience.node.dateStart + Experience.node.companyName}>
                                 <TimelineDot>
                                     {index === 0 && (
                                         <p className="wow tada"
@@ -46,7 +45,9 @@ export default function ExperienceListing({ExperienceEdges}) {
                                         <Label backgroundColor={"#43A047"} borderColor={"#43A047"} color={"white"}>
                                             {Experience.node.type.split(' ').map((word, index) => {
                                                 let back = (index === Experience.node.type.split(' ') - 1) ? word : word + " ";
-                                                return (index === 0) ? <strong>{back}</strong> : back;
+                                                return (index === 0) ?
+                                                    <strong key={word + back + index}>{back}</strong> :
+                                                    <span key={word + back + index}>back</span>;
                                             })}
                                         </Label>
                                         <Label><strong>{Experience.node.dateStart} - {Experience.node.dateEnd}</strong></Label>
