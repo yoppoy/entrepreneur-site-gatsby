@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="add (basic timeline functional)">
       <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Styled/SectionTitle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Styled/Tooltip.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +30,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/fonts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -53,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587548637798</updated>
-      <workItem from="1587548638841" duration="12009000" />
+      <workItem from="1587548638841" duration="16804000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -69,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587564213160</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix (timeline fonts) add (theme)">
+      <created>1587568430871</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587568430871</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +106,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add (basic timeline functional)" />
     <MESSAGE value="fix (remove feed plugin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (remove feed plugin)" />
+    <MESSAGE value="fix (timeline fonts) add (theme)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (timeline fonts) add (theme)" />
   </component>
 </project>

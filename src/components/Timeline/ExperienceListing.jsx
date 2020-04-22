@@ -4,6 +4,8 @@ import {Link} from "gatsby";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
 import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
+import Tooltip from "../Styled/Tooltip";
+import "devicon/devicon.css";
 
 const TimelineHeader = styled.div`
     margin-bottom: 0px;
@@ -209,6 +211,25 @@ const TimelineCompany = styled.div`
     }
 `;
 
+const TechList = styled.div`
+    display: inline;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 4px;
+    color: black;
+    font-size: 100%;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    border-radius: 0;
+    & i {
+        color: #444
+    }
+`;
+
+
 const Label = styled.div`
     display: inline;
     font-size: 75%;
@@ -242,7 +263,7 @@ export default function ExperienceListing({ExperienceEdges}) {
             <Timeline>
                 <TimelineContainer>
                     {ExperienceEdges.map((Experience, index) => {
-                        console.log(Experience);
+                        console.log("---> ", Experience.node.icons.data);
                         return (
                             <TimelineItem>
                                 <TimelineDot>
@@ -278,26 +299,22 @@ export default function ExperienceListing({ExperienceEdges}) {
                                     <div className={'description'}>
                                         {documentToReactComponents(Experience.node.description.json)}
                                     </div>
-                                    <div className="label label-icons">
-                                        <a className="wow tada" data-wow-delay="2s" data-position="top"
-                                           data-tooltip="React Native / React JS"><i
-                                            className="devicon-react-plain"></i></a>
-                                        <a className="wow tada" data-wow-delay="2.1s" data-position="top"
-                                           data-tooltip="NodeJS"><i
-                                            className="devicon-nodejs-plain"></i></a>
-                                        <a className="wow tada" data-wow-delay="2.2s" data-position="top"
-                                           data-tooltip="MongoDB"><i
-                                            className="devicon-mongodb-plain"></i></a>
-                                        <a className="wow tada" data-wow-delay="2.3s" data-position="top"
-                                           data-tooltip="Docker"><i
-                                            className="devicon-docker-plain"></i></a>
-                                        <a className="wow tada" data-wow-delay="2.4s" data-position="top"
-                                           data-tooltip="AWS"><i
-                                            className="devicon-amazonwebservices-plain"></i></a>
-                                        <a className="wow tada" data-wow-delay="2.5s" data-wow-delay="2.1s"
-                                           data-position="top"
-                                           data-tooltip="Gitlab"><i className="devicon-gitlab-plain"></i></a>
-                                    </div>
+                                    <TechList>
+                                        {Experience.node.icons.data.map((icon) => {
+                                            return (
+                                                <Tooltip key={Experience.node.title + icon.name}
+                                                         className="wow tada"
+                                                         data-wow-delay="2s"
+                                                         data-position="top"
+                                                         content={icon.name}
+                                                         orientation={'top'}
+                                                         onClick={(e) => e.preventDefault()}
+                                                >
+                                                    <i className={"devicon-" + icon.icon}/>
+                                                </Tooltip>
+                                            );
+                                        })}
+                                    </TechList>
                                 </TimelineContent>
                             </TimelineItem>
                         )
