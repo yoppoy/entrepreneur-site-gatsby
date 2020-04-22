@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/typography.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/logo-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/shanghai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/sunset.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/entrepreneur-site-gatsby.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/entrepreneur-site-gatsby.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/logo-client-air-liquide-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/logo-swile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/.idea/entrepreneur-site.iml" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/.idea/entrepreneur-site.iml" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/.idea/modules.xml" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/.idea/vcs.xml" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/responsive.min.css" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/responsive.min.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1alJZY5s0CyLh9cYxVh0xQLoW8Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -11,6 +63,34 @@
           <option name="name" value="StatusDashboardGroupingRule" />
         </RuleState>
       </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="" />
+      <created>1587548637798</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587548637798</updated>
+      <workItem from="1587548638841" duration="10821000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
 </project>

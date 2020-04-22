@@ -8,30 +8,62 @@ import config from "../../data/SiteConfig";
 import ExperienceListing from "../components/Timeline/ExperienceListing";
 
 export default function HomePage({data}) {
-    const {edges} = data.allMarkdownRemark;
+    console.log("DATA : ", data);
+    const experienceEdges = data.allContentfulExperience.edges;
+    const testimonyEdges = data.allContentfulTestimony.edges;
 
     return (
         <Layout>
             <SEO/>
-            <ExperienceListing ExperienceEdges={edges}/>
+            <ExperienceListing ExperienceEdges={experienceEdges}/>
         </Layout>
     );
 }
 
 export const query = graphql`
     query HomeQuery {
-        allMarkdownRemark(sort: { fields: [frontmatter___dateStart], order: DESC }) {
+        allContentfulTestimony {
             edges {
                 node {
-                    frontmatter {
-                        type
-                        title
-                        description
-                        dateStart
-                        dateEnd
-                        employerName
-                        employerLogo
-                        icons
+                    firstName
+                    jobTitle
+                    lastName
+                    date(formatString: "YYYY")
+                    companyName
+                    testimony {
+                        content {
+                            content {
+                                value
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allContentfulExperience(filter: {node_locale: {eq: "fr"}}, sort: {fields: dateStart, order: DESC}) {
+            edges {
+                node {
+                    title
+                    dateStart(formatString: "MMMM YYYY", locale: "fr")
+                    dateEnd(formatString: "MMMM YYYY", locale: "fr")
+                    type
+                    icons {
+                        data {
+                            name
+                            icon
+                        }
+                    }
+                    description {
+                        json
+                    }
+                    companyName
+                    companyLink
+                    companyLogo {
+                        fixed(width: 200) {
+                            src
+                            srcSet
+                            srcSetWebp
+                        }
                     }
                 }
             }

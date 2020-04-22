@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/work/entrepreneur-site/.idea/entrepreneur-site.iml" filepath="$USER_HOME$/work/entrepreneur-site/.idea/entrepreneur-site.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/entrepreneur-site-gatsby.iml" filepath="$PROJECT_DIR$/.idea/entrepreneur-site-gatsby.iml" />
     </modules>
   </component>
