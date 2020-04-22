@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import {Link} from "gatsby";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
 import styled from "styled-components";
+import SectionTitle from "../Styled/SectionTitle";
 
 const TimelineHeader = styled.div`
     margin-bottom: 0px;
@@ -11,7 +12,6 @@ const TimelineHeader = styled.div`
     background: ${props => props.theme.colors.primary};
     & h2 {
         margin-bottom: 0px;
-        color: white;
     } 
 `;
 
@@ -212,7 +212,6 @@ const TimelineCompany = styled.div`
 const Label = styled.div`
     display: inline;
     font-size: 75%;
-    font-weight: bold;
     line-height: 1;
     color: #fff;
     text-align: center;
@@ -235,9 +234,11 @@ const TimelineTagContainer = styled.div`
 export default function ExperienceListing({ExperienceEdges}) {
     return (
         <TimelineWrapper id="experience">
-            <TimelineHeader href="#experience">
-                <h2>Mon expérience professionnelle</h2>
-            </TimelineHeader>
+            <a href="#experience">
+                <TimelineHeader href="#experience">
+                    <SectionTitle>Mon expérience professionnelle</SectionTitle>
+                </TimelineHeader>
+            </a>
             <Timeline>
                 <TimelineContainer>
                     {ExperienceEdges.map((Experience, index) => {
@@ -258,7 +259,10 @@ export default function ExperienceListing({ExperienceEdges}) {
                                 <TimelineContent>
                                     <TimelineDate>
                                         <Label backgroundColor={"#43A047"} borderColor={"#43A047"} color={"white"}>
-                                            {Experience.node.type}
+                                            {Experience.node.type.split(' ').map((word, index) => {
+                                                let back = (index === Experience.node.type.split(' ') - 1) ? word : word + " ";
+                                                return (index === 0) ? <strong>{back}</strong> : back;
+                                            })}
                                         </Label>
                                         <Label><strong>{Experience.node.dateStart} - {Experience.node.dateEnd}</strong></Label>
                                     </TimelineDate>
