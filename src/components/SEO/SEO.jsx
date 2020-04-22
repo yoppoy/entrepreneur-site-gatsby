@@ -37,19 +37,7 @@ class SEO extends Component {
       return imageURI;
     };
 
-    const getPublicationDate = () => {
-      if (!postNode) return null;
-
-      if (!postNode.frontmatter) return null;
-
-      if (!postNode.frontmatter.date) return null;
-
-      return moment(postNode.frontmatter.date, config.dateFromFormat).toDate();
-    };
-
     image = getImagePath(image);
-
-    const datePublished = getPublicationDate();
 
     const authorJSONLD = {
       "@type": "Person",
@@ -104,7 +92,6 @@ class SEO extends Component {
             "@type": "Organization",
             logo: logoJSONLD
           },
-          datePublished,
           description
         }
       );
