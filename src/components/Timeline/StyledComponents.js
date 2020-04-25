@@ -127,9 +127,11 @@ export const TimelineContent = styled.div`
         color: #777;
     }
     @media screen and (max-width: 768px) {
-        max-width: 100%;
-        width: auto;
-        margin-left: 70px;
+        & { 
+            max-width: 100%;
+            width: auto;
+            margin-left: 70px;
+        }
         ${TimelineItem}:nth-child(even) & {
             float: none;
         }
@@ -149,6 +151,7 @@ export const TimelineContent = styled.div`
 
 export const TimelineDate = styled.div`
     line-height: 1.7;
+    margin-right: -20px;
     ${TimelineItem}:nth-child(even) & {
         right: auto;
         left: 0;
@@ -223,7 +226,7 @@ export const TechList = styled.div`
 `;
 
 export const Label = styled.div`
-    display: inline;
+    display: inline-block;
     font-size: 75%;
     line-height: 1;
     color: #fff;
@@ -231,7 +234,7 @@ export const Label = styled.div`
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0;
-    padding: 0.1em 0.5em 0.2em;
+    padding: 0.3em 0.4em 0.4em 0.4em;
     margin-right: 3px;
     margin-bottom: 1px;
     border: 2px solid #111;

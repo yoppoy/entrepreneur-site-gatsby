@@ -16,7 +16,7 @@ import {
     TimelineWrapper
 } from "./StyledComponents";
 
-export default function ExperienceListing({ExperienceEdges}) {
+export default function Index({edges}) {
     return (
         <TimelineWrapper id="experience">
             <a href="#experience">
@@ -26,7 +26,7 @@ export default function ExperienceListing({ExperienceEdges}) {
             </a>
             <Timeline>
                 <TimelineContainer>
-                    {ExperienceEdges.map((Experience, index) => {
+                    {edges.map((Experience, index) => {
                         return (
                             <TimelineItem key={Experience.node.dateStart + Experience.node.companyName}>
                                 <TimelineDot>

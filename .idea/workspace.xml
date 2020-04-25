@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Styled/SectionTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Styled/SectionTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/StyledComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/netlifycms/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/js/vendor/wow.min.js" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/js/vendor/wow.min.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -29,6 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -60,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587548637798</updated>
-      <workItem from="1587548638841" duration="18914000" />
+      <workItem from="1587548638841" duration="32691000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -125,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587576547594</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix (console errors)">
+      <created>1587576880543</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587576880543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix (console errors)">
+      <created>1587577105195</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587577105195</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +176,7 @@
     <MESSAGE value="add (functional tooltips)" />
     <MESSAGE value="add (basic timeline functional)" />
     <MESSAGE value="add (codebase refactor)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add (codebase refactor)" />
+    <MESSAGE value="fix (console errors)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (console errors)" />
   </component>
 </project>

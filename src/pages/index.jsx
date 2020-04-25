@@ -2,40 +2,29 @@ import React from "react";
 import {graphql} from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/SEO/SEO";
-import ExperienceListing from "../components/Timeline/ExperienceListing";
+import Timeline from "../components/Timeline";
+import Testimonials from "../components/Testimonials";
+import Contact from "../components/Contact";
+import '../../static/assets/fonts/linea-font/css/linea-font.css';
 
 export default function HomePage({data}) {
-    const experienceEdges = data.allContentfulExperience.edges;
-    const testimonyEdges = data.allContentfulTestimony.edges;
+    console.log(data);
+    const edges = data.allContentfulExperience.edges;
+    const testimonialEdges = data.allContentfulTestimonial.edges;
+    const profile = data.allContentfulProfile.edges[0].node;
 
     return (
         <Layout>
             <SEO/>
-            <ExperienceListing ExperienceEdges={experienceEdges}/>
+            <Timeline edges={edges}/>
+            <Testimonials edges={testimonialEdges}/>
+            <Contact profile={profile}/>
         </Layout>
     );
 }
 
 export const query = graphql`
     query HomeQuery {
-        allContentfulTestimony {
-            edges {
-                node {
-                    firstName
-                    jobTitle
-                    lastName
-                    date(formatString: "YYYY")
-                    companyName
-                    testimony {
-                        content {
-                            content {
-                                value
-                            }
-                        }
-                    }
-                }
-            }
-        }
         allContentfulExperience(filter: {node_locale: {eq: "fr"}}, sort: {fields: dateStart, order: DESC}) {
             edges {
                 node {
@@ -61,6 +50,32 @@ export const query = graphql`
                             srcSetWebp
                         }
                     }
+                }
+            }
+        }
+        allContentfulTestimonial(filter: {node_locale: {eq: "fr"}}) {
+            edges {
+                node {
+                    firstName
+                    jobTitle
+                    lastName
+                    date(formatString: "YYYY")
+                    companyName
+                    testimony {
+                        json
+                    }
+                }
+            }
+        }
+        allContentfulProfile(filter: {slug: {eq: "profile-default"}}) {
+            edges {
+                node {
+                    github
+                    email
+                    firstName
+                    lastName
+                    linkedin
+                    location
                 }
             }
         }

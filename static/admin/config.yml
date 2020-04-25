@@ -60,7 +60,7 @@ collections:
         default: "fr"
       }
       - { label: "Full Name", name: "fullName", widget: "string" }
-      - { label: "Testimony", name: "testimony", widget: "markdown" }
+      - { label: "Testimonials", name: "testimony", widget: "markdown" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Company", name: "company", widget: "string" }
       - { label: "Job Title", name: "job", widget: "string" }
