@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Styled/SectionTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Styled/SectionTitle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timeline/ExperienceListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timeline/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/StyledComponents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/netlifycms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/js/vendor/wow.min.js" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/js/vendor/wow.min.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +34,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/fonts" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
@@ -49,6 +43,7 @@
       <recent name="$PROJECT_DIR$/static/fonts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/fonts" />
       <recent name="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
     </key>
   </component>
@@ -74,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587548637798</updated>
-      <workItem from="1587548638841" duration="32691000" />
+      <workItem from="1587548638841" duration="33328000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -153,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587577105195</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add (contact section)">
+      <created>1587772915682</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587772915682</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add (contact section)">
+      <created>1587772941938</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587772941938</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +186,7 @@
     <MESSAGE value="add (basic timeline functional)" />
     <MESSAGE value="add (codebase refactor)" />
     <MESSAGE value="fix (console errors)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (console errors)" />
+    <MESSAGE value="add (contact section)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add (contact section)" />
   </component>
 </project>

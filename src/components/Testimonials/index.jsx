@@ -10,8 +10,8 @@ const Container = styled.div`
 `;
 
 const TestimonialsSlider = styled(Slider)`
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     width: 55%;
     margin: 0 auto;
     @media (max-width: 770px) {
@@ -57,6 +57,12 @@ const TestimonialBody = styled.div`
     outline: none;
     & * {
        color: white !important;
+    }
+    & .et-quote {
+        display: block;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 34px;
     }
     & .referral {
         font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
@@ -124,7 +130,7 @@ export default function Testimonials({edges}) {
                         return (
                             <TestimonialBody key={Testimonial.node.firstName + Testimonial.node.lastName}>
                                 {documentToReactComponents(Testimonial.node.testimony.json)}
-                                <div style={{marginBottom: 25}}/>
+                                <div className={'et-quote'}/>
                                 <div>
                                     <h5 className={"referral"}>{Testimonial.node.firstName} {Testimonial.node.lastName} - {Testimonial.node.date}</h5>
                                     <h5 className={"referral-info"}>{Testimonial.node.jobTitle} - {Testimonial.node.companyName}</h5>

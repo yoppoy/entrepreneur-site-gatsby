@@ -6,6 +6,7 @@ import Timeline from "../components/Timeline";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import '../../static/assets/fonts/linea-font/css/linea-font.css';
+import '../../static/assets/fonts/et-lineicons/css/style.css';
 
 export default function HomePage({data}) {
     console.log(data);
@@ -53,7 +54,7 @@ export const query = graphql`
                 }
             }
         }
-        allContentfulTestimonial(filter: {node_locale: {eq: "fr"}}) {
+        allContentfulTestimonial(filter: {node_locale: {eq: "fr"}}, sort: {fields: date, order: DESC}) {
             edges {
                 node {
                     firstName

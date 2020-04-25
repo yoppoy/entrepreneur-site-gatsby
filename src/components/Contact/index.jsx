@@ -16,7 +16,6 @@ const Container = styled.div`
     }
 `;
 
-
 const FieldHeading = styled.h5`
     letter-spacing: 2px;
     font-weight: 300;
@@ -49,7 +48,7 @@ const FieldValue = styled.p`
 const FieldContainer = styled.div`
     display: flex;
     align-items: center;
-    max-width: 540px;
+    max-width: 600px;
     margin: auto;
     justify-content: space-between;
     & ${FieldHeading}, & ${FieldValue} {
