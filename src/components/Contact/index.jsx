@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
+import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 
 const Container = styled.div`
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: 160px;
+    padding-bottom: 160px;
     & ${SectionTitle} 
         text-al
     }
@@ -28,9 +29,10 @@ const FieldHeading = styled.h5`
     }
 `;
 
-const FieldValue = styled.p`
+const FieldValue = styled.div`
+    &, & * { 
     letter-spacing: 1.7px;
-    font-size: .9em;
+    font-size: .99em;
     font-style: normal;
     line-height: 1.42857143;
     color: #999;
@@ -43,14 +45,14 @@ const FieldValue = styled.p`
            text-align: center;
         }
     }
+    }
 `;
 
 const FieldContainer = styled.div`
-    display: flex;
-    align-items: center;
-    max-width: 600px;
+    text-align: center;
     margin: auto;
     justify-content: space-between;
+    margin-top: 3em;
     & ${FieldHeading}, & ${FieldValue} {
         text-transform: uppercase;
         margin-bottom: 4px;
@@ -65,50 +67,53 @@ const FieldContainer = styled.div`
 `;
 
 const Field = styled.div`
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-items: center;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 2.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 3.5em;
+    & > div {
+        display: inline-block;
+        text-align: left;
+    }
     @media (max-width: 520px) {
         & {
-           flex-direction: column;
+            margin-left: 2em;
+            margin-right: 2em;
+            display: flex;
+            flex-direction: column;
         }
     }
 `;
 
 const FieldIcon = styled.div`
+    display: inline-block;
     color: black;
     font-size: 36px;
     margin-right: .5em;
     @media (max-width: 520px) {
         & {
-           margin-right: 0;
+            display: block;
+            margin: auto;
         }
     }
 `;
 
-export default function Contact({profile}) {
-    console.log(profile);
+export default function Contact({edges}) {
     return (
         <Container id={"contacts"}>
             <SectionTitle>Me contacter</SectionTitle>
             <FieldContainer>
-                <Field>
-                    <FieldIcon className={"linea-basic-geolocalize-01"}/>
-                    <div>
-                        <FieldHeading>Basé sur</FieldHeading>
-                        <FieldValue>{profile.location}</FieldValue>
-                    </div>
-                </Field>
-                <Field>
-                    <FieldIcon className={"linea-basic-paperplane"}/>
-                    <div>
-                        <FieldHeading>Email</FieldHeading>
-                        <FieldValue><a href={"emailto:" + profile.email}>{profile.email}</a></FieldValue>
-                    </div>
-                </Field>
+                {edges.map(Contact => (
+                    <Field key={Contact.node.id}>
+                        <FieldIcon className={Contact.node.icon}/>
+                        <div>
+                            <FieldHeading>{Contact.node.heading}</FieldHeading>
+                            <FieldValue>{documentToReactComponents(Contact.node.value.json)}</FieldValue>
+                        </div>
+                    </Field>
+                ))}
             </FieldContainer>
         </Container>
     );

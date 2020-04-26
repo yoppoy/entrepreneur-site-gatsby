@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/fonts/et-lineicons/fonts/icomoon.woff" afterDir="false" />
+    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="add (media links / contacts)">
+      <change afterPath="$PROJECT_DIR$/.gatsby-browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/fontawesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SiteConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/SiteConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/logos/logo-1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/logos/logo-1024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/logos/logo-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/logos/logo-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/logos/logo-48.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/logos/logo-48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/logos/logo-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/logos/logo-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/js/main.js" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/js/main.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/main.css" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/main.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/responsive.css" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/responsive.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/scss/_footers.scss" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/scss/_footers.scss" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/scss/_settings.scss" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/scss/_settings.scss" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/scss/main.scss" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/scss/main.scss" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/template-picker.css" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/template-picker.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/public/index.html" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -34,7 +60,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
@@ -43,6 +69,7 @@
       <recent name="$PROJECT_DIR$/static/fonts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/static/assets/fonts" />
       <recent name="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
     </key>
@@ -69,7 +96,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587548637798</updated>
-      <workItem from="1587548638841" duration="33328000" />
+      <workItem from="1587548638841" duration="44881000" />
+      <workItem from="1587918672560" duration="1909000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -162,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587772941938</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix (contact / testimony)">
+      <created>1587773619211</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587773619211</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +208,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -187,6 +224,7 @@
     <MESSAGE value="add (codebase refactor)" />
     <MESSAGE value="fix (console errors)" />
     <MESSAGE value="add (contact section)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add (contact section)" />
+    <MESSAGE value="fix (contact / testimony)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (contact / testimony)" />
   </component>
 </project>

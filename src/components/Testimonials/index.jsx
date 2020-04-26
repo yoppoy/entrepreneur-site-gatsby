@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 
 const Container = styled.div`
-    background: black;
+    background: #111;
 `;
 
 const TestimonialsSlider = styled(Slider)`
@@ -128,7 +128,7 @@ export default function Testimonials({edges}) {
                 <TestimonialsSlider {...sliderConfig}>
                     {edges.map(Testimonial => {
                         return (
-                            <TestimonialBody key={Testimonial.node.firstName + Testimonial.node.lastName}>
+                            <TestimonialBody key={Testimonial.node.id}>
                                 {documentToReactComponents(Testimonial.node.testimony.json)}
                                 <div className={'et-quote'}/>
                                 <div>

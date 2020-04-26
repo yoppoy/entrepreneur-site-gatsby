@@ -4,6 +4,7 @@ import config from "../../data/SiteConfig";
 import theme from "../utils/theme";
 import {ThemeProvider} from "styled-components";
 import "./index.css";
+import SEO from "../components/SEO/SEO";
 
 export default class MainLayout extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class MainLayout extends React.Component {
                     <meta name="description" content={config.siteDescription}/>
                     <html lang="en"/>
                 </Helmet>
+                <SEO/>
                 {children}
             </ThemeProvider>
         );

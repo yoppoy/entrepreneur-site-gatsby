@@ -1,8 +1,6 @@
 import React from "react";
-import Img from "gatsby-image"
-import {Link} from "gatsby";
+import Img from "gatsby-image";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
-import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
 import Tooltip from "../Styled/Tooltip";
 import "devicon/devicon.css";
@@ -27,8 +25,9 @@ export default function Index({edges}) {
             <Timeline>
                 <TimelineContainer>
                     {edges.map((Experience, index) => {
+                        console.log(Experience.node.companyLogo.fixed);
                         return (
-                            <TimelineItem key={Experience.node.dateStart + Experience.node.companyName}>
+                            <TimelineItem key={Experience.node.id}>
                                 <TimelineDot>
                                     {index === 0 && (
                                         <p className="wow tada"
@@ -36,9 +35,11 @@ export default function Index({edges}) {
                                     )}
                                 </TimelineDot>
                                 <TimelineCompany>
-                                    <img alt="Air Liquide"
-                                         style={{maxHeight: 135}}
-                                         src={Experience.node.companyLogo.fixed.src}/>{/*TODO REPLACE WITH IMG*/}
+                                    <Img
+                                        fluid={Experience.node.companyLogo.fluid}
+                                        style={{maxHeight: 135, width: 230}}
+                                        imgStyle={{ objectFit: 'contain' }}
+                                    />
                                 </TimelineCompany>
                                 <TimelineContent>
                                     <TimelineDate>

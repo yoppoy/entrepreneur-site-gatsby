@@ -11,17 +11,6 @@ module.exports = {
     pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
     siteMetadata: {
         siteUrl: urljoin(config.siteUrl, config.pathPrefix),
-        rssMetadata: {
-            site_url: urljoin(config.siteUrl, config.pathPrefix),
-            feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
-            title: config.siteTitle,
-            description: config.siteDescription,
-            image_url: `${urljoin(
-                config.siteUrl,
-                config.pathPrefix
-            )}/logos/logo-512.png`,
-            copyright: config.copyright
-        }
     },
     plugins: [
         "gatsby-plugin-styled-components",
@@ -65,13 +54,6 @@ module.exports = {
             }
         },
         {
-            resolve: "gatsby-source-filesystem",
-            options: {
-                name: "experiences",
-                path: `${__dirname}/content/experiences`
-            }
-        },
-        {
             resolve: `gatsby-source-contentful`,
             options: {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -84,7 +66,13 @@ module.exports = {
             options: {
                 plugins: [
                     {
-                        resolve: `gatsby-remark-relative-images`
+                        resolve: `gatsby-remark-images-contentful`,
+                        options: {
+                            // It's important to specify the maxWidth (in pixels) of
+                            // the content container as this plugin uses this as the
+                            // base for generating different widths of each image.
+                            maxWidth: 690,
+                        },
                     },
                     {
                         resolve: "gatsby-remark-images",
@@ -93,11 +81,13 @@ module.exports = {
                         }
                     },
                     {
+                        resolve: `gatsby-remark-relative-images`
+                    },
+                    {
                         resolve: "gatsby-remark-responsive-iframe"
                     },
                     "gatsby-remark-copy-linked-files",
                     "gatsby-remark-autolink-headers",
-                    "gatsby-remark-prismjs"
                 ]
             }
         },
