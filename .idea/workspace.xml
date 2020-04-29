@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="add (media links / contacts)">
-      <change afterPath="$PROJECT_DIR$/.gatsby-browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Styled/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/anders/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/anders/fonts/anders.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/StyledComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timeline/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/js/main.js" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/js/main.js" afterDir="false" />
       <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/main.css" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/main.css" afterDir="false" />
       <change beforePath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/responsive.css" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/assets/styles/responsive.css" afterDir="false" />
@@ -35,17 +48,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/fonts" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/static/fonts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/static/assets/fonts" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
     </key>
   </component>
@@ -72,7 +87,10 @@
       <option name="presentableId" value="Default" />
       <updated>1587548637798</updated>
       <workItem from="1587548638841" duration="44881000" />
-      <workItem from="1587918672560" duration="2231000" />
+      <workItem from="1587918672560" duration="5477000" />
+      <workItem from="1587984083785" duration="1662000" />
+      <workItem from="1588158452135" duration="2398000" />
+      <workItem from="1588176798233" duration="775000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -179,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587926548979</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix (blocked social media from adblock)">
+      <created>1587926934489</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587926934489</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +233,7 @@
     <MESSAGE value="add (contact section)" />
     <MESSAGE value="fix (contact / testimony)" />
     <MESSAGE value="add (updated site config + gatsby image api)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add (updated site config + gatsby image api)" />
+    <MESSAGE value="fix (blocked social media from adblock)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (blocked social media from adblock)" />
   </component>
 </project>

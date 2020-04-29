@@ -4,6 +4,7 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
+import {Element} from "react-scroll";
 
 const Container = styled.div`
     background: #111;
@@ -123,7 +124,7 @@ export default function Testimonials({edges}) {
     };
 
     return (
-        <div id={"testimonials"}>
+        <Element name={"testimonials"}>
             <Container>
                 <TestimonialsSlider {...sliderConfig}>
                     {edges.map(Testimonial => {
@@ -139,6 +140,6 @@ export default function Testimonials({edges}) {
                     })}
                 </TestimonialsSlider>
             </Container>
-        </div>
+        </Element>
     );
 }

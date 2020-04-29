@@ -9,6 +9,7 @@ import Contact from "../components/Contact";
 import '../../static/assets/fonts/linea-font/css/linea-font.css';
 import '../../static/assets/fonts/et-lineicons/css/style.css';
 import MediaLinks from '../components/MediaLinks';
+import Home from "../components/Home";
 
 export default function HomePage({data}) {
     console.log(data);
@@ -16,13 +17,15 @@ export default function HomePage({data}) {
     const testimonialEdges = data.allContentfulTestimonial.edges;
     const contactEdges = data.allContentfulContact.edges;
     const mediaLinkEdges = data.allContentfulMediaLink.edges;
+    const siteConfiguration = data.allContentfulSiteConfiguration.edges[0].node;
 
     return (
         <Layout>
             <Helmet
                 title={SiteConfig.siteTitle}
             />
-            <Timeline edges={edges}/>
+            <Home config={siteConfiguration}/>
+            <Timeline edges={edges} config={siteConfiguration}/>
             <Testimonials edges={testimonialEdges}/>
             <Contact edges={contactEdges}/>
             <MediaLinks edges={mediaLinkEdges}/>
@@ -32,6 +35,22 @@ export default function HomePage({data}) {
 
 export const query = graphql`
     query HomeQuery {
+        allContentfulSiteConfiguration {
+            edges {
+                node {
+                    backgroundHome {
+                        fluid(quality: 87) {
+                            ...GatsbyContentfulFluid
+                        }
+                    }
+                    backgroundExperience {
+                        fluid(quality: 80) {
+                            ...GatsbyContentfulFluid
+                        }
+                    }
+                }
+            }
+        }
         allContentfulExperience(filter: {node_locale: {eq: "fr"}}, sort: {fields: dateStart, order: DESC}) {
             edges {
                 node {

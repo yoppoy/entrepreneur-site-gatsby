@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'anders';
+	src: url('../fonts/anders.ttf?-3gtgps') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.anders {
+	font-family: 'anders';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

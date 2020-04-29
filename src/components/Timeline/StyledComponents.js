@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BackgroundImage from 'gatsby-background-image';
 
 export const TimelineHeader = styled.div`
     margin-bottom: 0px;
@@ -10,8 +11,7 @@ export const TimelineHeader = styled.div`
     } 
 `;
 
-export const TimelineWrapper = styled.div`
-    background: url(http://178.62.87.154//assets/images/shanghai.jpg);
+export const TimelineWrapper = styled(BackgroundImage)`
     background-size: cover;
     background-position: center right;
     background-attachment: fixed;

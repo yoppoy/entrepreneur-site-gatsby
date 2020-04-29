@@ -1,7 +1,9 @@
 import React from 'react';
+import {Element} from 'react-scroll';
 import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
+import Button from "../Styled/Button";
 
 const Container = styled.div`
     padding-top: 160px;
@@ -102,19 +104,19 @@ const FieldIcon = styled.div`
 
 export default function Contact({edges}) {
     return (
-        <Container id={"contacts"}>
-            <SectionTitle>Me contacter</SectionTitle>
-            <FieldContainer>
-                {edges.map(Contact => (
-                    <Field key={Contact.node.id}>
-                        <FieldIcon className={Contact.node.icon}/>
-                        <div>
+        <Element name={"contact"}>
+            <Container>
+                <SectionTitle>Me contacter</SectionTitle>
+                <FieldContainer>
+                    {edges.map(Contact => (
+                        <Field key={Contact.node.id}>
+                            <FieldIcon className={Contact.node.icon}/>
                             <FieldHeading>{Contact.node.heading}</FieldHeading>
                             <FieldValue>{documentToReactComponents(Contact.node.value.json)}</FieldValue>
-                        </div>
-                    </Field>
-                ))}
-            </FieldContainer>
-        </Container>
+                        </Field>
+                    ))}
+                </FieldContainer>
+            </Container>
+        </Element>
     );
 }
