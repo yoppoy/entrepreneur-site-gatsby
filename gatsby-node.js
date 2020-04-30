@@ -5,6 +5,20 @@ const _ = require("lodash");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage, deletePage } = actions;
+    // Check if the page is a localized 404
+    if (page.path.match(/^\/[a-z]{2}\/404\/$/)) {
+        const oldPage = { ...page };
+        // Get the language code from the path, and match all paths
+        // starting with this code (apart from other valid paths)
+        const langCode = page.path.split(`/`)[1]
+        page.matchPath = `/${langCode}/*`
+        // Recreate the modified page
+        deletePage(oldPage)
+        createPage(page)
+    }
+}
 exports.onCreateNode = ({ node, actions, getNode }) => {
   /*const { createNodeField } = actions;
   let slug;
@@ -102,16 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const pageCount = Math.ceil(postsEdges.length / postsPerPage);
 
     [...Array(pageCount)].forEach((_val, pageNum) => {
-      createPage({
-        path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-        component: listingPage,
-        context: {
-          limit: postsPerPage,
-          skip: pageNum * postsPerPage,
-          pageCount,
-          currentPageNum: pageNum + 1
-        }
-      });
+      e
     });
   }
 

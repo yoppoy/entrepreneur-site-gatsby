@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import Button from "../Styled/Button";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
     padding-top: 160px;
@@ -103,10 +104,13 @@ const FieldIcon = styled.div`
 `;
 
 export default function Contact({edges}) {
+    const { t } = useTranslation();
+
+    console.log("rendering contacts");
     return (
         <Element name={"contact"}>
             <Container>
-                <SectionTitle>Me contacter</SectionTitle>
+                <SectionTitle>{t('sectionContact')}</SectionTitle>
                 <FieldContainer>
                     {edges.map(Contact => (
                         <Field key={Contact.node.id}>

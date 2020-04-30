@@ -11,6 +11,10 @@ module.exports = {
     pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
     siteMetadata: {
         siteUrl: urljoin(config.siteUrl, config.pathPrefix),
+        languages: {
+            langs: ['fr', 'en'],
+            defaultLangKey: 'fr'
+        }
     },
     plugins: [
         "gatsby-plugin-styled-components",
@@ -20,6 +24,13 @@ module.exports = {
             options: {
                 pathToConfigModule: `src/utils/typography`,
             },
+        },
+        {
+            resolve: 'gatsby-plugin-i18n',
+            options: {
+                langKeyDefault: 'fr',
+                useLangKeyLayout: false
+            }
         },
         {
             resolve: `gatsby-plugin-webfonts`,

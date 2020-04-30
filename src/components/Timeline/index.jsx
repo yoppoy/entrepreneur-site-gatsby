@@ -14,8 +14,11 @@ import {
     TimelineWrapper
 } from "./StyledComponents";
 import {Element} from "react-scroll";
+import {useTranslation} from "react-i18next";
 
 export default function Index({edges, config}) {
+    const { t } = useTranslation();
+
     return (
         <Element name={"timeline"}>
             <TimelineWrapper
@@ -25,13 +28,13 @@ export default function Index({edges, config}) {
             >
                 <a href="#experience">
                     <TimelineHeader href="#experience">
-                        <SectionTitle>Mon expérience professionnelle</SectionTitle>
+                        <SectionTitle>{t('sectionTimeline')}</SectionTitle>
                     </TimelineHeader>
                 </a>
                 <Timeline>
                     <TimelineContainer>
                         {edges.map((Experience, index) => {
-                            console.log(Experience.node.companyLogo.fixed);
+                            console.log(Experience.node);
                             return (
                                 <TimelineItem key={Experience.node.id}>
                                     <TimelineDot>
@@ -54,7 +57,7 @@ export default function Index({edges, config}) {
                                                     let back = (index === Experience.node.type.split(' ') - 1) ? word : word + " ";
                                                     return (index === 0) ?
                                                         <strong key={word + back + index}>{back}</strong> :
-                                                        <span key={word + back + index}>back</span>;
+                                                        <span key={word + back + index}>{back}</span>;
                                                 })}
                                             </Label>
                                             <Label><strong>{Experience.node.dateStart} - {Experience.node.dateEnd}</strong></Label>

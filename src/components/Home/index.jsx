@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import {scroller, Element} from 'react-scroll';
+import {useTranslation} from 'react-i18next';
 import BackgroundImage from 'gatsby-background-image';
 import '../../../static/assets/fonts/anders/css/style.css';
 import '../../../static/assets/fonts/linea-font/css/linea-font.css';
-import {scroller} from 'react-scroll';
-import Button, {ButtonAsLink} from "../Styled/Button";
-import {Element} from "react-scroll";
+
+import {ButtonAsLink} from "../Styled/Button";
 
 const HomeWrapper = styled(BackgroundImage)`
     background-size: cover;
@@ -92,12 +93,15 @@ const Scroller = styled.a`
 `;
 
 export default function Home({config}) {
+    const { t } = useTranslation();
+    console.log("rendering contacts");
     const scrollTo = (name) => {
         scroller.scrollTo(name, {
             duration: 800,
             smooth: "easeInOutQuad",
         });
-    }
+    };
+
     return (
         <Element name={"home"}>
             <HomeWrapper
@@ -107,16 +111,29 @@ export default function Home({config}) {
                 id="home"
             >
                 <DarkWrapper>
-                    <TextSubtitle><strong>Développeur</strong> full stack <strong>JS</strong></TextSubtitle>
+                    <TextSubtitle>
+                        <strong>{t('jobTitle')}</strong>
+                    </TextSubtitle>
                     <TextTitle>Yan Poinssot</TextTitle>
                     <ButtonWrapper>
-                        <ButtonAsLink href={"#skills"} style={{margin: '1em'}} onClick={() => scrollTo("timeline")}>Mes compétences</ButtonAsLink>
-                        <ButtonAsLink href={"#contact"} filled={true} style={{margin: '1em'}} onClick={() => scrollTo("contact")}>Me
-                            contacter</ButtonAsLink>
+                        <ButtonAsLink
+                            href={"#skills"}
+                            style={{margin: '1em'}}
+                            onClick={() => scrollTo("skills")}>
+                            {t('sectionSkills')}
+                        </ButtonAsLink>
+                        <ButtonAsLink
+                            href={"#contact"}
+                            filled={true}
+                            style={{margin: '1em'}}
+                            onClick={() => scrollTo("contact")}
+                        >
+                            {t('sectionContact')}
+                        </ButtonAsLink>
                     </ButtonWrapper>
                 </DarkWrapper>
                 <Scroller href="#services" onClick={() => scrollTo("timeline")}>
-                    <span className={"scroller-text"}>Mon profil</span>
+                    <span className={"scroller-text"}>{t('profile')}</span>
                     <span className="linea-arrows-down-double-34"></span>
                 </Scroller>
             </HomeWrapper>

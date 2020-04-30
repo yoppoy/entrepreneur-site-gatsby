@@ -31,7 +31,7 @@ export const Timeline = styled.div`
     }
     @media screen and (max-width: 768px) {
         &:before {
-            left: 50px;
+            left: 35px;
         }
     }
 `;
@@ -42,11 +42,17 @@ export const TimelineContainer = styled.div`
     margin-right: auto;
     margin-left: auto;
     @media (min-width: 768px) {
-            width: 750px;
+            min-width: 750px;
+            width: 90%;
         }
     }
     @media (min-width: 1200px) {
         width: 1170px;
+    }
+    @media screen and (max-width: 768px) {
+        & {
+            padding-left: 0px;
+        }
     }
     &:before {
         content: " ";

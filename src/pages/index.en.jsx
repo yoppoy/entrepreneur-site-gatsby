@@ -1,40 +1,16 @@
 import React from "react";
 import {graphql} from "gatsby";
-import Helmet from "react-helmet";
-import Layout from "../layout";
-import SiteConfig from "../../data/SiteConfig";
-import Timeline from "../components/Timeline";
-import Testimonials from "../components/Testimonials";
-import Contact from "../components/Contact";
-import '../../static/assets/fonts/linea-font/css/linea-font.css';
-import '../../static/assets/fonts/et-lineicons/css/style.css';
-import MediaLinks from '../components/MediaLinks';
-import Home from "../components/Home";
+import HomePage from "../components/HomePage";
+import MainLayout from "../layout";
 
-export default function HomePage({data}) {
-    console.log(data);
-    const edges = data.allContentfulExperience.edges;
-    const testimonialEdges = data.allContentfulTestimonial.edges;
-    const contactEdges = data.allContentfulContact.edges;
-    const mediaLinkEdges = data.allContentfulMediaLink.edges;
-    const siteConfiguration = data.allContentfulSiteConfiguration.edges[0].node;
-
-    return (
-        <Layout>
-            <Helmet
-                title={SiteConfig.siteTitle}
-            />
-            <Home config={siteConfiguration}/>
-            <Timeline edges={edges} config={siteConfiguration}/>
-            <Testimonials edges={testimonialEdges}/>
-            <Contact edges={contactEdges}/>
-            <MediaLinks edges={mediaLinkEdges}/>
-        </Layout>
-    );
-}
+export default (props) => (
+    <MainLayout locale={"en"}>
+        <HomePage {...props}/>
+    </MainLayout>
+);
 
 export const query = graphql`
-    query HomeQuery {
+    query HomeEnQuery {
         allContentfulSiteConfiguration {
             edges {
                 node {
@@ -51,13 +27,13 @@ export const query = graphql`
                 }
             }
         }
-        allContentfulExperience(filter: {node_locale: {eq: "fr"}}, sort: {fields: dateStart, order: DESC}) {
+        allContentfulExperience(filter: {node_locale: {eq: "en"}}, sort: {fields: dateStart, order: DESC}) {
             edges {
                 node {
                     id
                     title
-                    dateStart(formatString: "MMMM YYYY", locale: "fr")
-                    dateEnd(formatString: "MMMM YYYY", locale: "fr")
+                    dateStart(formatString: "MMMM YYYY", locale: "en")
+                    dateEnd(formatString: "MMMM YYYY", locale: "en")
                     type
                     icons {
                         data {
@@ -79,7 +55,23 @@ export const query = graphql`
                 }
             }
         }
-        allContentfulTestimonial(filter: {node_locale: {eq: "fr"}}, sort: {fields: date, order: DESC}) {
+        allContentfulSkillsCard(filter: {node_locale: {eq: "en"}}, sort: {fields: slug}) {
+            edges {
+                node {
+                    id
+                    icon
+                    title {
+                        json
+                    }
+                    data {
+                        icon
+                        score
+                        name
+                    }
+                }
+            }
+        }
+        allContentfulTestimonial(filter: {node_locale: {eq: "en"}}, sort: {fields: date, order: DESC}) {
             edges {
                 node {
                     id
@@ -94,7 +86,7 @@ export const query = graphql`
                 }
             }
         }
-        allContentfulContact(sort: {fields: slug}, filter: {node_locale: {eq: "fr"}}) {
+        allContentfulContact(sort: {fields: slug}, filter: {node_locale: {eq: "en"}}) {
             edges {
                 node {
                     id
@@ -106,7 +98,7 @@ export const query = graphql`
                 }
             }
         }
-        allContentfulMediaLink(sort: {fields: slug}, filter: {node_locale: {eq: "fr"}}) {
+        allContentfulMediaLink(sort: {fields: slug}, filter: {node_locale: {eq: "en"}}) {
             edges {
                 node {
                     id
