@@ -26,6 +26,13 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                color: `#111`,
+                showSpinner: true,
+            },
+        },
+        {
             resolve: 'gatsby-plugin-i18n',
             options: {
                 langKeyDefault: 'fr',
