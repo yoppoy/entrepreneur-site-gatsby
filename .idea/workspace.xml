@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +77,7 @@
       <workItem from="1587984083785" duration="1662000" />
       <workItem from="1588158452135" duration="2398000" />
       <workItem from="1588176798233" duration="946000" />
-      <workItem from="1588181680261" duration="27017000" />
+      <workItem from="1588181680261" duration="27706000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -287,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588373489956</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix (adjust icon sizes)">
+      <created>1588373721544</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1588373721545</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +340,7 @@
     <MESSAGE value="fix (build not finding window)" />
     <MESSAGE value="add (fade in particles)" />
     <MESSAGE value="add (more icons)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add (more icons)" />
+    <MESSAGE value="fix (adjust icon sizes)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (adjust icon sizes)" />
   </component>
 </project>
