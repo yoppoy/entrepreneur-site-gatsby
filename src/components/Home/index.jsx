@@ -5,7 +5,7 @@ import {useTranslation} from 'react-i18next';
 import BackgroundImage from 'gatsby-background-image';
 import '../../../static/assets/fonts/anders/css/style.css';
 import '../../../static/assets/fonts/linea-font/css/linea-font.css';
-
+import {Particles} from 'react-particles-js';
 import {ButtonAnchor} from "../Styled/Button";
 
 const HomeWrapper = styled(BackgroundImage)`
@@ -92,9 +92,88 @@ const Scroller = styled.a`
     }
 `;
 
+const ParticleBackground = styled(Particles)`
+    height: 100vh;
+    width: 100vw;
+    background: none;
+    position: absolute;
+`;
+
 export default function Home({config}) {
-    const { t } = useTranslation();
-    console.log("rendering contacts");
+    const {t} = useTranslation();
+
+    const particleConfig = {
+        particles: {
+            number: {
+                value: window.innerWidth / 18,
+            },
+            shape: {
+                type: [
+                    "image",
+                ],
+                image: [
+                    {
+                        src: require('./react-icon.png'),
+                        height: 20,
+                        width: 20
+                    },
+                    {
+                        src: require('./gatsby-icon.png'),
+                        height: 20,
+                        width: 20
+                    },
+                    {
+                        src: require('./redux-icon.png'),
+                        height: 20,
+                        width: 20
+                    },
+                    {
+                        src: require('./docker-icon.png'),
+                        height: 20,
+                        width: 20
+                    },
+                    {
+                        src: require('./material-icon.png'),
+                        height: 20,
+                        width: 20
+                    },
+                ]
+            },
+            color: {
+                "value": "#FFF"
+            },
+            opacity: {
+                "value": 0.75,
+                "random": false,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.5,
+                    "sync": false
+
+                }
+            },
+            "size": {
+                "value": 11,
+                "random": false,
+                "anim": {
+                    "enable": true,
+                    "speed": 2,
+                    "size_min": 10,
+                    "sync": false
+                }
+            }
+        },
+        interactivity: {
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "repulse",
+                }
+            }
+        }
+    };
+
     const scrollTo = (name) => {
         scroller.scrollTo(name, {
             duration: 800,
@@ -102,39 +181,40 @@ export default function Home({config}) {
         });
     };
 
+    console.log(window.innerWidth);
+
     return (
-        <Element name={"home"}>
-            <HomeWrapper
-                Tag="section"
-                fluid={config.backgroundHome.fluid}
-                backgroundColor={`black`}
-                id="home"
-            >
-                <DarkWrapper>
-                    <TextSubtitle>
-                        <strong>{t('jobTitle')}</strong>
-                    </TextSubtitle>
-                    <TextTitle>Yan Poinssot</TextTitle>
-                    <ButtonWrapper>
-                        <ButtonAnchor
-                            to={window.location.pathname + "#skills"}
-                            title={t('sectionSkills')}>
-                            {t('sectionSkills')}
-                        </ButtonAnchor>
-                        <ButtonAnchor
-                            to={window.location.pathname + "#contact"}
-                            title={t('sectionContact')}
-                            filled={true}
-                        >
-                            {t('sectionContact')}
-                        </ButtonAnchor>
-                    </ButtonWrapper>
-                </DarkWrapper>
-                <Scroller href="#services" onClick={() => scrollTo("timeline")}>
-                    <span className={"scroller-text"}>{t('profile')}</span>
-                    <span className="linea-arrows-down-double-34"></span>
-                </Scroller>
-            </HomeWrapper>
-        </Element>
+        <HomeWrapper
+            Tag="section"
+            fluid={config.backgroundHome.fluid}
+            backgroundColor={`black`}
+            id="home"
+        >
+            <ParticleBackground params={particleConfig}/>
+            <DarkWrapper>
+                <TextSubtitle>
+                    <strong>{t('jobTitle')}</strong>
+                </TextSubtitle>
+                <TextTitle>Yan Poinssot</TextTitle>
+                <ButtonWrapper>
+                    <ButtonAnchor
+                        to={window.location.pathname + "#skills"}
+                        title={t('sectionSkills')}>
+                        {t('sectionSkills')}
+                    </ButtonAnchor>
+                    <ButtonAnchor
+                        to={window.location.pathname + "#contact"}
+                        title={t('sectionContact')}
+                        filled={true}
+                    >
+                        {t('sectionContact')}
+                    </ButtonAnchor>
+                </ButtonWrapper>
+            </DarkWrapper>
+            <Scroller href="#services" onClick={() => scrollTo("timeline")}>
+                <span className={"scroller-text"}>{t('profile')}</span>
+                <span className="linea-arrows-down-double-34"></span>
+            </Scroller>
+        </HomeWrapper>
     )
 }
