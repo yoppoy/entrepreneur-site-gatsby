@@ -105,7 +105,7 @@ export default function Home({config}) {
     const particleConfig = {
         particles: {
             number: {
-                value: window.innerWidth / 18,
+                value: (typeof window !== `undefined`) ? window.innerWidth / 18 : 50,
             },
             shape: {
                 type: [
@@ -181,8 +181,6 @@ export default function Home({config}) {
         });
     };
 
-    console.log(window.innerWidth);
-
     return (
         <HomeWrapper
             Tag="section"
@@ -198,12 +196,12 @@ export default function Home({config}) {
                 <TextTitle>Yan Poinssot</TextTitle>
                 <ButtonWrapper>
                     <ButtonAnchor
-                        to={window.location.pathname + "#skills"}
+                        to={ (typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
                         title={t('sectionSkills')}>
                         {t('sectionSkills')}
                     </ButtonAnchor>
                     <ButtonAnchor
-                        to={window.location.pathname + "#contact"}
+                        to={(typeof window !== `undefined`) ? window.location.pathname + "#contact" : "#contact"}
                         title={t('sectionContact')}
                         filled={true}
                     >
