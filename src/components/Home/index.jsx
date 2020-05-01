@@ -172,7 +172,7 @@ export default function Home({config}) {
                 "distance": 60
             },
             size: {
-                value: 12,
+                value: 13,
                 random: false,
                 anim: {
                     enable: true,
