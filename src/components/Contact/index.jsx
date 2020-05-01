@@ -108,7 +108,7 @@ export default function Contact({edges}) {
 
     console.log("rendering contacts");
     return (
-        <Element name={"contact"}>
+        <section id={"contact"}>
             <Container>
                 <SectionTitle>{t('sectionContact')}</SectionTitle>
                 <FieldContainer>
@@ -121,6 +121,6 @@ export default function Contact({edges}) {
                     ))}
                 </FieldContainer>
             </Container>
-        </Element>
+        </section>
     );
 }

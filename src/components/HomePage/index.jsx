@@ -12,7 +12,6 @@ import Home from "../Home";
 import Skills from "../Skills";
 
 export default function HomePage({data}) {
-    console.log(data);
     const edges = data.allContentfulExperience.edges;
     const skillsCardEdges = data.allContentfulSkillsCard.edges;
     const testimonialEdges = data.allContentfulTestimonial.edges;

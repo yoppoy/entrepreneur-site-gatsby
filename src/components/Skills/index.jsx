@@ -17,17 +17,29 @@ const CardWrapper = styled.div`
   margin: auto;
   @media (min-width: 1200px) {
     & {
-      max-width: 1170px;
+      max-width: 1200px;
     }
   }
 `;
 
 const Card = styled.div`
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     width: 33.333%;
     display: inline-block;
     vertical-align: top;
+    @media (max-width: 900px) {
+        & {
+          width: 100%;
+          padding-left: 80px;
+          padding-right: 80px;
+        }
+    }
+    @media (max-width: 500px) {
+        & {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+    }
     & > div {
         border: 1px solid #f8f8f8;
         background: #fff;
@@ -66,7 +78,7 @@ export default function Skills({edges}) {
                                 <span className={skillCard.node.icon}/>
                                 {documentToReactComponents(skillCard.node.title.json)}
                                 <div>
-                                    {skillCard.node.data.map((skill) => <Skill skill={skill}/>)}
+                                    {skillCard.node.data.map((skill) => <Skill key={skill.name} skill={skill}/>)}
                                 </div>
                             </div>
                         </Card>

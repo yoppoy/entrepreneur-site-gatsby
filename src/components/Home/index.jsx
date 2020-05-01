@@ -6,7 +6,7 @@ import BackgroundImage from 'gatsby-background-image';
 import '../../../static/assets/fonts/anders/css/style.css';
 import '../../../static/assets/fonts/linea-font/css/linea-font.css';
 
-import {ButtonAsLink} from "../Styled/Button";
+import {ButtonAnchor} from "../Styled/Button";
 
 const HomeWrapper = styled(BackgroundImage)`
     background-size: cover;
@@ -116,20 +116,18 @@ export default function Home({config}) {
                     </TextSubtitle>
                     <TextTitle>Yan Poinssot</TextTitle>
                     <ButtonWrapper>
-                        <ButtonAsLink
-                            href={"#skills"}
-                            style={{margin: '1em'}}
-                            onClick={() => scrollTo("skills")}>
+                        <ButtonAnchor
+                            to={window.location.pathname + "#skills"}
+                            title={t('sectionSkills')}>
                             {t('sectionSkills')}
-                        </ButtonAsLink>
-                        <ButtonAsLink
-                            href={"#contact"}
+                        </ButtonAnchor>
+                        <ButtonAnchor
+                            to={window.location.pathname + "#contact"}
+                            title={t('sectionContact')}
                             filled={true}
-                            style={{margin: '1em'}}
-                            onClick={() => scrollTo("contact")}
                         >
                             {t('sectionContact')}
-                        </ButtonAsLink>
+                        </ButtonAnchor>
                     </ButtonWrapper>
                 </DarkWrapper>
                 <Scroller href="#services" onClick={() => scrollTo("timeline")}>
