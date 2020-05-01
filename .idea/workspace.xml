@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
+    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="fix (remove preloader)">
+      <change afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -36,11 +37,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/static/assets/fonts" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/public/static/custom-fonts/devicons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/assets" />
@@ -74,7 +75,7 @@
       <workItem from="1587984083785" duration="1662000" />
       <workItem from="1588158452135" duration="2398000" />
       <workItem from="1588176798233" duration="946000" />
-      <workItem from="1588181680261" duration="15553000" />
+      <workItem from="1588181680261" duration="16476000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -209,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588287336715</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix (remove preloader)">
+      <created>1588287670359</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1588287670359</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +250,7 @@
     <MESSAGE value="add (home with scrolling)" />
     <MESSAGE value="add (translation + skills start)" />
     <MESSAGE value="add(skills)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add(skills)" />
+    <MESSAGE value="fix (remove preloader)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (remove preloader)" />
   </component>
 </project>
