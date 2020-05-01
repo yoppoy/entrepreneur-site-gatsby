@@ -27,6 +27,10 @@ i18n
         react: {
             wait: true,
         },
+        detection: {
+            order: ['path'],
+            lookupFromPathIndex: 0
+        }
     });
 
 export default i18n;

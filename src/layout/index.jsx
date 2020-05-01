@@ -11,11 +11,6 @@ import i18n from '../i18n/config';
 export default function MainLayout({children, locale}) {
     const lng = locale ? locale : 'fr';
 
-    useEffect(() => {
-        if (lng !== i18n.language)
-            i18n.changeLanguage(lng);
-    }, []);
-
     return (
         <ThemeProvider theme={theme}>
             <Helmet>
