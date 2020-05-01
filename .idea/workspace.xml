@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="fix (put offline plugin)">
+    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.en.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.en.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       <workItem from="1587984083785" duration="1662000" />
       <workItem from="1588158452135" duration="2398000" />
       <workItem from="1588176798233" duration="946000" />
-      <workItem from="1588181680261" duration="17565000" />
+      <workItem from="1588181680261" duration="18006000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588340269138</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add (webp background images)">
+      <created>1588340936390</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1588340936390</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +273,7 @@
     <MESSAGE value="fix (remove preloader)" />
     <MESSAGE value="fix (root redirect)" />
     <MESSAGE value="fix (remove offline plugin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (remove offline plugin)" />
+    <MESSAGE value="add (webp background images)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add (webp background images)" />
   </component>
 </project>
