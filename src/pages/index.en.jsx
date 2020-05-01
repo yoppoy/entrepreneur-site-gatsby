@@ -16,12 +16,12 @@ export const query = graphql`
                 node {
                     backgroundHome {
                         fluid(quality: 87) {
-                            ...GatsbyContentfulFluid
+                            ...GatsbyContentfulFluid_withWebp
                         }
                     }
                     backgroundExperience {
                         fluid(quality: 80) {
-                            ...GatsbyContentfulFluid
+                            ...GatsbyContentfulFluid_withWebp
                         }
                     }
                 }
