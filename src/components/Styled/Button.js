@@ -57,6 +57,9 @@ export const ButtonAsLink = styled.a`
          color: ${props => props.filled ? 'black' : 'white'};
         text-decoration: none;
     }
+    &:hover {
+      color: #111;
+    }
 `;
 
 
@@ -177,6 +180,9 @@ const Button = styled.button`
     &:visited {
         color: white;
         text-decoration: none;
+    }
+    &:hover {
+      color: #111;
     }
 `;
 
