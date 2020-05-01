@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {scroller, Element} from 'react-scroll';
 import {useTranslation} from 'react-i18next';
@@ -97,11 +97,13 @@ const ParticleBackground = styled(Particles)`
     width: 100vw;
     background: none;
     position: absolute;
+    opacity: ${props => props.visible ? 1 : 0};
+    transition: opacity 1000ms ease;
 `;
 
 export default function Home({config}) {
     const {t} = useTranslation();
-
+    const [particlesVisible, setVisibleParticles] = useState(false);
     const particleConfig = {
         particles: {
             number: {
@@ -153,14 +155,14 @@ export default function Home({config}) {
 
                 }
             },
-            "size": {
-                "value": 11,
-                "random": false,
-                "anim": {
-                    "enable": true,
-                    "speed": 2,
-                    "size_min": 10,
-                    "sync": false
+            size: {
+                value: 11,
+                random: false,
+                anim: {
+                    enable: true,
+                    speed: 2,
+                    size_min: 10,
+                    sync: false
                 }
             }
         },
@@ -173,6 +175,12 @@ export default function Home({config}) {
             }
         }
     };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setVisibleParticles(true);
+        }, 200);
+    });
 
     const scrollTo = (name) => {
         scroller.scrollTo(name, {
@@ -188,7 +196,7 @@ export default function Home({config}) {
             backgroundColor={`black`}
             id="home"
         >
-            <ParticleBackground params={particleConfig}/>
+            <ParticleBackground params={particleConfig} visible={particlesVisible}/>
             <DarkWrapper>
                 <TextSubtitle>
                     <strong>{t('jobTitle')}</strong>
@@ -196,7 +204,7 @@ export default function Home({config}) {
                 <TextTitle>Yan Poinssot</TextTitle>
                 <ButtonWrapper>
                     <ButtonAnchor
-                        to={ (typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
+                        to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
                         title={t('sectionSkills')}>
                         {t('sectionSkills')}
                     </ButtonAnchor>
