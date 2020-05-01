@@ -107,7 +107,7 @@ export default function Home({config}) {
     const particleConfig = {
         particles: {
             number: {
-                value: (typeof window !== `undefined`) ? window.innerWidth / 18 : 50,
+                value: (typeof window !== `undefined`) ? window.innerWidth / 20 : 50,
             },
             shape: {
                 type: [
@@ -116,28 +116,43 @@ export default function Home({config}) {
                 image: [
                     {
                         src: require('./react-icon.png'),
-                        height: 20,
-                        width: 20
+                        height: 40,
+                        width: 40
                     },
                     {
                         src: require('./gatsby-icon.png'),
-                        height: 20,
-                        width: 20
+                        height: 40,
+                        width: 40
                     },
                     {
                         src: require('./redux-icon.png'),
-                        height: 20,
-                        width: 20
+                        height: 40,
+                        width: 40
                     },
                     {
                         src: require('./docker-icon.png'),
-                        height: 20,
-                        width: 20
+                        height: 40,
+                        width: 40
                     },
                     {
                         src: require('./material-icon.png'),
-                        height: 20,
-                        width: 20
+                        height: 40,
+                        width: 40
+                    },
+                    {
+                        src: require('./graphql-icon.png'),
+                        height: 40,
+                        width: 40
+                    },
+                    {
+                        src: require('./typescript-icon.png'),
+                        height: 40,
+                        width: 40
+                    },
+                    {
+                        src: require('./nodejs-icon.png'),
+                        height: 40,
+                        width: 40
                     },
                 ]
             },
@@ -145,18 +160,19 @@ export default function Home({config}) {
                 "value": "#FFF"
             },
             opacity: {
-                "value": 0.75,
-                "random": false,
-                "anim": {
-                    "enable": true,
-                    "speed": 1,
-                    "opacity_min": 0.5,
-                    "sync": false
-
+                value: 0.75,
+                random: false,
+                anim: {
+                    speed: 1,
+                    opacity_min: 0.5,
+                    sync: false
                 }
             },
+            line_linked: {
+                "distance": 60
+            },
             size: {
-                value: 11,
+                value: 12,
                 random: false,
                 anim: {
                     enable: true,
@@ -171,7 +187,11 @@ export default function Home({config}) {
                 onhover: {
                     enable: true,
                     mode: "repulse",
-                }
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push"
+                },
             }
         }
     };

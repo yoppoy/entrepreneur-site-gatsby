@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Home/graphql-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/nodejs-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/typescript-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
     </list>
@@ -75,7 +78,7 @@
       <workItem from="1587984083785" duration="1662000" />
       <workItem from="1588158452135" duration="2398000" />
       <workItem from="1588176798233" duration="946000" />
-      <workItem from="1588181680261" duration="25648000" />
+      <workItem from="1588181680261" duration="26945000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -273,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588363622117</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="add (fade in particles)">
+      <created>1588372004510</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1588372004510</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +325,7 @@
     <MESSAGE value="fix (button)" />
     <MESSAGE value="add (particle background)" />
     <MESSAGE value="fix (build not finding window)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (build not finding window)" />
+    <MESSAGE value="add (fade in particles)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add (fade in particles)" />
   </component>
 </project>
