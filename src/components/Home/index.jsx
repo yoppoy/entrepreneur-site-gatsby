@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import {scroller, Element} from 'react-scroll';
 import {useTranslation} from 'react-i18next';
 import BackgroundImage from 'gatsby-background-image';
 import '../../../static/assets/fonts/anders/css/style.css';
@@ -26,7 +25,7 @@ const DarkWrapper = styled.div`
 `;
 
 const TextTitle = styled.h1`
-    font-family: 'anders';
+    font-family: "anders", "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 4em;
     font-weight: 700;
     letter-spacing: 15px;
@@ -237,7 +236,7 @@ export default function Home({config}) {
                     </ButtonAnchor>
                 </ButtonWrapper>
             </DarkWrapper>
-            <Scroller href="#services" onClick={() => scrollTo("timeline")}>
+            <Scroller href="#services">
                 <span className={"scroller-text"}>{t('profile')}</span>
                 <span className="linea-arrows-down-double-34"></span>
             </Scroller>

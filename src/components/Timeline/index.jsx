@@ -13,11 +13,9 @@ import {
     TimelineItem,
     TimelineWrapper
 } from "./StyledComponents";
-import {Element} from "react-scroll";
 import {useTranslation} from "react-i18next";
 import Icon from "@iconify/react";
 import {getIcon} from "../../utils";
-import {ButtonAnchor} from "../Styled/Button";
 
 export default function Index({edges, config}) {
     const {t} = useTranslation();

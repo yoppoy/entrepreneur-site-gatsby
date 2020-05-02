@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import {Element} from 'react-scroll';
 import SectionTitle from "../Styled/SectionTitle";
 import {useTranslation} from "react-i18next";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import "./ProgressBar.css"
 import Skill from "./Skill";
 
-const Wrapper = styled(Element)`
+const Wrapper = styled.section`
   background: #f8f8f8;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -69,7 +68,7 @@ export default function Skills({edges}) {
     const {t} = useTranslation();
 
     return (
-        <Wrapper name={"skills"} id={"skills"}>
+        <Wrapper id={"skills"}>
             <SectionTitle style={{marginBottom: 50}}>{t('sectionSkills')}</SectionTitle>
             <CardWrapper>
                 {edges.map((skillCard) => {

@@ -1,18 +1,16 @@
 import React from 'react';
-import {Element} from 'react-scroll';
 import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
-import Button from "../Styled/Button";
 import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
     padding-top: 160px;
     padding-bottom: 160px;
-    & ${SectionTitle} 
-        text-al
+    & ${SectionTitle} {
+        text-align: center;
     }
-    media (max-width: 1260px) {
+    @media (max-width: 1260px) {
         & {
             padding-left: 35px;
             padding-right: 35px;

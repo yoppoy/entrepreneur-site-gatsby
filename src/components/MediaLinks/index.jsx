@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import "../../../static/assets/fonts/fontawesome/css/font-awesome.min.css";
 import Button, {ButtonAsLink} from "../Styled/Button";
-import {Element} from "react-scroll";
 
 const MediaContainer = styled.div`
     background: #111;
@@ -22,7 +21,7 @@ const Seperator = styled.div`
 export default function MediaLinks({edges}) {
     console.log("rendering contacts");
     return (
-        <Element name={"social"}>
+        <section id={"social"}>
             <MediaContainer>
                 {edges.map((MediaLink, index) => (
                     <React.Fragment key={MediaLink.node.id}>
@@ -34,6 +33,6 @@ export default function MediaLinks({edges}) {
                     </React.Fragment>
                 ))}
             </MediaContainer>
-        </Element>
+        </section>
     )
 }
