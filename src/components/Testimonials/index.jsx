@@ -8,6 +8,7 @@ import {Element} from "react-scroll";
 
 const Container = styled.div`
     background: #111;
+    position: relative;
 `;
 
 const TestimonialsSlider = styled(Slider)`

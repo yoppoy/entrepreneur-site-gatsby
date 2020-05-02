@@ -12,6 +12,7 @@ export const TimelineHeader = styled.div`
 `;
 
 export const TimelineWrapper = styled(BackgroundImage)`
+    position: absolute;
     background-size: cover;
     background-position: center right;
     background-attachment: fixed;

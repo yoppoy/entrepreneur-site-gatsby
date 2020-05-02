@@ -11,6 +11,7 @@ const Wrapper = styled(Element)`
   background: #f8f8f8;
   padding-top: 100px;
   padding-bottom: 100px;
+  position:relative;
 `;
 
 const CardWrapper = styled.div`

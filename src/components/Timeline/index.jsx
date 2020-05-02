@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
 import SectionTitle from "../Styled/SectionTitle";
 import Tooltip from "../Styled/Tooltip";
-import "devicon/devicon.css";
+import {AnchorLink} from "gatsby-plugin-anchor-links";
 import {
     Label, TechList,
     Timeline, TimelineCompany,
@@ -15,22 +15,26 @@ import {
 } from "./StyledComponents";
 import {Element} from "react-scroll";
 import {useTranslation} from "react-i18next";
+import Icon from "@iconify/react";
+import {getIcon} from "../../utils";
+import {ButtonAnchor} from "../Styled/Button";
 
 export default function Index({edges, config}) {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
 
     return (
-        <Element name={"timeline"}>
+        <section id={"experience"}>
             <TimelineWrapper
-                Tag="section"
+                Tag="div"
                 fluid={config.backgroundExperience.fluid}
                 backgroundColor={`black`}
             >
-                <a href="#experience">
-                    <TimelineHeader href="#experience">
+                <AnchorLink to={(typeof window !== `undefined`) ? window.location.pathname + "#experience" : "#experience"}
+                            title={t('sectionSkills')}>
+                    <TimelineHeader>
                         <SectionTitle>{t('sectionTimeline')}</SectionTitle>
                     </TimelineHeader>
-                </a>
+                </AnchorLink>
                 <Timeline>
                     <TimelineContainer>
                         {edges.map((Experience, index) => {
@@ -78,17 +82,20 @@ export default function Index({edges, config}) {
                                         </div>
                                         <TechList>
                                             {Experience.node.icons.data.map((icon) => {
-                                                return (
-                                                    <Tooltip key={Experience.node.title + icon.name}
-                                                             className="wow tada"
-                                                             data-wow-delay="2s"
-                                                             content={icon.name}
-                                                             orientation={'top'}
-                                                             onClick={(e) => e.preventDefault()}
-                                                    >
-                                                        <i className={"devicon-" + icon.icon}/>
-                                                    </Tooltip>
-                                                );
+                                                const iconPath = getIcon(icon.icon);
+                                                if (iconPath)
+                                                    return (
+                                                        <Tooltip key={Experience.node.title + icon.name}
+                                                                 className="wow tada"
+                                                                 data-wow-delay="2s"
+                                                                 content={icon.name}
+                                                                 orientation={'top'}
+                                                                 onClick={(e) => e.preventDefault()}
+                                                        >
+                                                            <Icon icon={iconPath} color={'#444'}
+                                                                  style={{marginRight: 5}}/>
+                                                        </Tooltip>
+                                                    );
                                             })}
                                         </TechList>
                                     </TimelineContent>
@@ -98,6 +105,6 @@ export default function Index({edges, config}) {
                     </TimelineContainer>
                 </Timeline>
             </TimelineWrapper>
-        </Element>
+        </section>
     );
 }

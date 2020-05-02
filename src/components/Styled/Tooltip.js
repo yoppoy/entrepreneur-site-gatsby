@@ -25,7 +25,7 @@ const Tooltip = styled.a`
     }
     
     &:hover:after, &:hover:before {
-        transform: 'translateY(0px);'
+        transform: translateY(0px);
     }
     
     & {

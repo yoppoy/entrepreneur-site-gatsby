@@ -96,7 +96,7 @@ const ParticleBackground = styled(Particles)`
     height: 100vh;
     width: 100vw;
     background: none;
-    position: absolute;
+    position: fixed;
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1000ms ease;
 `;

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import React from "react";
+import {InlineIcon} from "@iconify/react";
+import {getIcon} from "../../utils";
 
+const Icon = styled(InlineIcon)`
+  margin-right: 5px;
+`;
 
 const SkillContainer = styled.div`
     margin-top: 20px;
@@ -12,17 +17,16 @@ const SkillContainer = styled.div`
         letter-spacing: 0.2px;
         line-height: 1.8em;
         margin-bottom: 0;
-        & > i {
-          margin-right: 5px;
-        }
     }
 `;
 
 export default function Skill({skill}) {
+    const icon = getIcon(skill.icon);
+
     return (
         <SkillContainer>
             <p>
-                <i className={skill.icon}/>
+                {icon && <Icon icon={icon}/>}
                 <strong>{skill.name}</strong>
             </p>
             <ol className="progress-bar-custom">
