@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="fix (remove unused dependencies)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Skills/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timeline/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +76,7 @@
       <workItem from="1588158452135" duration="2398000" />
       <workItem from="1588176798233" duration="946000" />
       <workItem from="1588181680261" duration="30324000" />
-      <workItem from="1588380263730" duration="6170000" />
+      <workItem from="1588380263730" duration="8621000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -323,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588438043775</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix (remove unused dependencies)">
+      <created>1588438757467</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1588438757467</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -201,13 +201,6 @@ export default function Home({config}) {
         }, 200);
     });
 
-    const scrollTo = (name) => {
-        scroller.scrollTo(name, {
-            duration: 800,
-            smooth: "easeInOutQuad",
-        });
-    };
-
     return (
         <HomeWrapper
             Tag="section"
