@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Styled/SimpleIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/docker-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/docker-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/gatsby-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/gatsby-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/graphql-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/graphql-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/material-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/material-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/nodejs-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/nodejs-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/react-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/react-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/redux-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/redux-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/typescript-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/particles/typescript-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Skills/Skill.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills/Skill.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timeline/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588438757467</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix (performance issues with icons)">
+      <created>1588608982513</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1588608982513</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +349,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add (codebase refactor)" />
     <MESSAGE value="fix (console errors)" />
     <MESSAGE value="add (contact section)" />
     <MESSAGE value="fix (contact / testimony)" />
@@ -387,7 +373,8 @@
     <MESSAGE value="fix (i18n language detection)" />
     <MESSAGE value="add (iconify)" />
     <MESSAGE value="fix (remove unused dependencies)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (remove unused dependencies)" />
+    <MESSAGE value="fix (performance issues with icons)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (performance issues with icons)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
