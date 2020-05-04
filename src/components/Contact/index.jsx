@@ -104,7 +104,6 @@ const FieldIcon = styled.div`
 export default function Contact({edges}) {
     const { t } = useTranslation();
 
-    console.log("rendering contacts");
     return (
         <section id={"contact"}>
             <Container>

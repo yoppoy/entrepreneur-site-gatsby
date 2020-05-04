@@ -15,7 +15,7 @@ import {
 } from "./StyledComponents";
 import {useTranslation} from "react-i18next";
 import Icon from "@iconify/react";
-import {getIcon} from "../../utils";
+import {getCustomIcon} from "../../utils";
 
 export default function Index({edges, config}) {
     const {t} = useTranslation();
@@ -36,7 +36,6 @@ export default function Index({edges, config}) {
                 <Timeline>
                     <TimelineContainer>
                         {edges.map((Experience, index) => {
-                            console.log(Experience.node);
                             return (
                                 <TimelineItem key={Experience.node.id}>
                                     <TimelineDot>
@@ -80,7 +79,7 @@ export default function Index({edges, config}) {
                                         </div>
                                         <TechList>
                                             {Experience.node.icons.data.map((icon) => {
-                                                const iconPath = getIcon(icon.icon);
+                                                const iconPath = getCustomIcon(icon.icon);
                                                 if (iconPath)
                                                     return (
                                                         <Tooltip key={Experience.node.title + icon.name}
@@ -90,8 +89,7 @@ export default function Index({edges, config}) {
                                                                  orientation={'top'}
                                                                  onClick={(e) => e.preventDefault()}
                                                         >
-                                                            <Icon icon={iconPath} color={'#444'}
-                                                                  style={{marginRight: 5}}/>
+                                                            <Icon icon={iconPath} color={'#444'} style={{marginRight: 5}}/>
                                                         </Tooltip>
                                                     );
                                             })}

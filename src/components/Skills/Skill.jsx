@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import React from "react";
-import {InlineIcon} from "@iconify/react";
-import {getIcon} from "../../utils";
+import InlineIcon from "@iconify/react";
+import {getCustomIcon} from "../../utils";
 
 const Icon = styled(InlineIcon)`
-  margin-right: 5px;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.8);
 `;
 
 const SkillContainer = styled.div`
@@ -21,12 +22,12 @@ const SkillContainer = styled.div`
 `;
 
 export default function Skill({skill}) {
-    const icon = getIcon(skill.icon);
+    const icon = getCustomIcon(skill.icon);
 
     return (
         <SkillContainer>
             <p>
-                {icon && <Icon icon={icon}/>}
+                {icon && <Icon color={'rgba(0, 0, 0, 0.8)'} icon={icon}/>}
                 <strong>{skill.name}</strong>
             </p>
             <ol className="progress-bar-custom">

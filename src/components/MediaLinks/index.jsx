@@ -19,7 +19,6 @@ const Seperator = styled.div`
 
 
 export default function MediaLinks({edges}) {
-    console.log("rendering contacts");
     return (
         <section id={"social"}>
             <MediaContainer>

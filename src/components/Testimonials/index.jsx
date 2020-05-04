@@ -123,7 +123,6 @@ export default function Testimonials({edges}) {
         nextArrow: <SliderArrow to="next"/>,
     };
 
-    console.log("rendering testimonials");
     return (
         <section id={"testimonials"}>
             <Container>

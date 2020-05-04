@@ -2051,6 +2051,11 @@
   dependencies:
     core-js "^2.5.7"
 
+"@jxnblk/simple-icons@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jxnblk/simple-icons/-/simple-icons-1.0.0.tgz#7c8e3c6b55b5b3fb8b2c693398b8680b70650c75"
+  integrity sha1-fI48a1W1s/uLLGkzmLhoC3BlDHU=
+
 "@mikaelkristiansson/domready@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.10.tgz#f6d69866c0857664e70690d7a0bfedb72143adb5"
@@ -13943,6 +13948,11 @@ react-aria-menubutton@^6.0.0:
     prop-types "^15.6.0"
     teeny-tap "^0.2.0"
 
+react-async-component@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-async-component/-/react-async-component-2.0.0.tgz#a56c1278ac588291fce6cd5cf033eb97eb36483c"
+  integrity sha512-wefjuqJt5dYQC0y6v5uKqeDhigiVJQN3PO4L2/nF0/r3shtH52iRH3JvLP0UADhNsNnQmyORoqhVOJ59K7XQZA==
+
 react-codemirror2@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/react-codemirror2/-/react-codemirror2-6.0.0.tgz#180065df57a64026026cde569a9708fdf7656525"
@@ -14282,6 +14292,13 @@ react-side-effect@^1.1.0:
   integrity sha512-v1ht1aHg5k/thv56DRcjw+WtojuuDHFUgGfc+bFHOWsF4ZK6C2V57DO0Or0GPsg6+LSTE0M6Ry/gfzhzSwbc5w==
   dependencies:
     shallowequal "^1.0.1"
+
+react-simple-icons@^1.0.0-beta.5:
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/react-simple-icons/-/react-simple-icons-1.0.0-beta.5.tgz#b022badb6bd8060ab3ed6cf3ce503e300a706356"
+  integrity sha1-sCK622vYBgqz7WzzzlA+MApwY1Y=
+  dependencies:
+    "@jxnblk/simple-icons" "^1.0.0"
 
 react-slick@^0.25.2:
   version "0.25.2"
@@ -15766,6 +15783,24 @@ simple-get@^3.0.3, simple-get@^3.1.0:
     decompress-response "^4.2.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
+
+simple-icons-react-component@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/simple-icons-react-component/-/simple-icons-react-component-1.0.0.tgz#ec5080ba297f8be78aa1fb5b4d541c67f494cdd2"
+  integrity sha512-qBCZNMMtSyPkTQoRTi0UueLjEKWg2QrdQgXA+KV1REFgYHYcswO3O55YFE7SxjxUE4OcxGFKDJrFzdOzEbbihQ==
+  dependencies:
+    prop-types "^15.7.2"
+    simple-icons "^1.9.19"
+
+simple-icons@^1.9.19:
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-1.20.0.tgz#08a98d405256890db6d3a9caf6291b8d60365a67"
+  integrity sha512-J/lP0ajPp74vL4gWXzqkuFlMX09u6gkJJ5UvqkeEqVi0TJe1EmkSUfFsq035HLX8MrBMDW5oa1G0Kydmrd128g==
+
+simple-icons@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-2.11.0.tgz#2a64e655b1252b75c661497d4bb0e32b96e71ab2"
+  integrity sha512-k3+Kv0YhHCxAuoHlhOqx/CITDwV2g03cv05TldQbAzPiEBezKxyQ2MNh0TdBf0lUSXcLqvS3T1wGFKK3UWEJ0w==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"

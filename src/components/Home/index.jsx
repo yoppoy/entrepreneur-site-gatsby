@@ -100,100 +100,101 @@ const ParticleBackground = styled(Particles)`
     transition: opacity 1000ms ease;
 `;
 
+const particleConfig = {
+    particles: {
+        number: {
+            value: (typeof window !== `undefined`) ? window.innerWidth / 20 : 50,
+        },
+        shape: {
+            type: [
+                "image",
+            ],
+            image: [
+                {
+                    src: require('../../../static/assets/icons/particles/react-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/gatsby-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/redux-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/docker-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/material-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/graphql-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/typescript-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+                {
+                    src: require('../../../static/assets/icons/particles/nodejs-icon.png'),
+                    height: 40,
+                    width: 40
+                },
+            ]
+        },
+        color: {
+            "value": "#FFF"
+        },
+        opacity: {
+            value: 0.75,
+            random: false,
+            anim: {
+                speed: 1,
+                opacity_min: 0.5,
+                sync: false
+            }
+        },
+        line_linked: {
+            "distance": 60
+        },
+        size: {
+            value: 13,
+            random: false,
+            anim: {
+                enable: true,
+                speed: 2,
+                size_min: 10,
+                sync: false
+            }
+        }
+    },
+    interactivity: {
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse",
+            },
+            onclick: {
+                enable: true,
+                mode: "push"
+            },
+        }
+    }
+};
+
 export default function Home({config}) {
     const {t} = useTranslation();
     const [particlesVisible, setVisibleParticles] = useState(false);
-    const particleConfig = {
-        particles: {
-            number: {
-                value: (typeof window !== `undefined`) ? window.innerWidth / 20 : 50,
-            },
-            shape: {
-                type: [
-                    "image",
-                ],
-                image: [
-                    {
-                        src: require('./react-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./gatsby-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./redux-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./docker-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./material-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./graphql-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./typescript-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                    {
-                        src: require('./nodejs-icon.png'),
-                        height: 40,
-                        width: 40
-                    },
-                ]
-            },
-            color: {
-                "value": "#FFF"
-            },
-            opacity: {
-                value: 0.75,
-                random: false,
-                anim: {
-                    speed: 1,
-                    opacity_min: 0.5,
-                    sync: false
-                }
-            },
-            line_linked: {
-                "distance": 60
-            },
-            size: {
-                value: 13,
-                random: false,
-                anim: {
-                    enable: true,
-                    speed: 2,
-                    size_min: 10,
-                    sync: false
-                }
-            }
-        },
-        interactivity: {
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: "repulse",
-                },
-                onclick: {
-                    enable: true,
-                    mode: "push"
-                },
-            }
-        }
-    };
 
     useEffect(() => {
         setTimeout(() => {
