@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import SectionTitle from "../Styled/SectionTitle";
+import SectionTitle from "./Styled/SectionTitle";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import {useTranslation} from "react-i18next";
 

@@ -2,12 +2,12 @@ import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {useTranslation} from 'react-i18next';
 import BackgroundImage from 'gatsby-background-image';
-import '../../../static/assets/fonts/anders/css/style.css';
-import '../../../static/assets/fonts/linea-font/css/linea-font.css';
+import '../../static/assets/fonts/anders/css/style.css';
+import '../../static/assets/fonts/linea-font/css/linea-font.css';
 import {Particles} from 'react-particles-js';
-import {ButtonAnchor} from "../Styled/Button";
+import {ButtonAnchor} from "./Styled/Button";
 import {AnchorLink} from "gatsby-plugin-anchor-links";
-import Header from "../Header";
+import Header from "./Header";
 
 const HomeWrapper = styled(BackgroundImage)`
     background-size: cover;
@@ -137,42 +137,42 @@ const particleConfig = {
             ],
             image: [
                 {
-                    src: require('../../../static/assets/icons/particles/react-icon.png'),
+                    src: require('../../static/assets/icons/particles/react-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/gatsby-icon.png'),
+                    src: require('../../static/assets/icons/particles/gatsby-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/redux-icon.png'),
+                    src: require('../../static/assets/icons/particles/redux-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/docker-icon.png'),
+                    src: require('../../static/assets/icons/particles/docker-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/material-icon.png'),
+                    src: require('../../static/assets/icons/particles/material-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/graphql-icon.png'),
+                    src: require('../../static/assets/icons/particles/graphql-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/typescript-icon.png'),
+                    src: require('../../static/assets/icons/particles/typescript-icon.png'),
                     height: 40,
                     width: 40
                 },
                 {
-                    src: require('../../../static/assets/icons/particles/nodejs-icon.png'),
+                    src: require('../../static/assets/icons/particles/nodejs-icon.png'),
                     height: 40,
                     width: 40
                 },

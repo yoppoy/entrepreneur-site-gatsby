@@ -1,11 +1,11 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import theme from "../utils/theme";
 import {ThemeProvider} from "styled-components";
 import {I18nextProvider} from 'react-i18next';
 import "./index.css";
-import SEO from "../components/SEO/SEO";
+import SEO from "../components/SEO";
 import i18n from '../i18n/config';
 
 export default function MainLayout({children, locale}) {

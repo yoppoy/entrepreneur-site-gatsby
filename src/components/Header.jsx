@@ -24,15 +24,10 @@ export default function HeaderCustom() {
         setLng(i18n.language === 'fr' ? 'en' : 'fr');
     }, [i18n.language]);
 
-    const changeLanguage = (lng) => {
-        console.log('changing to : ', lng);
-        i18n.changeLanguage(lng);
-    };
-
     return (
         <Header>
-            <a href={'/' + changeLng} onClick={() => changeLanguage(changeLng)}>
-                <Img src={require('../../../static/assets/icons/flags/' + changeLng + '.svg')}
+            <a href={'/' + changeLng} onClick={() => i18n.changeLanguage(changeLng)}>
+                <Img src={require('../../static/assets/icons/flags/' + changeLng + '.svg')}
                      alt={'flag ' + changeLng}/>
             </a>
         </Header>

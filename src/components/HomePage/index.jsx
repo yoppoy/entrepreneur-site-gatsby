@@ -1,6 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Layout from "../../layout";
 import SiteConfig from "../../../data/SiteConfig";
 import Timeline from "../Timeline";
 import Testimonials from "../Testimonials";

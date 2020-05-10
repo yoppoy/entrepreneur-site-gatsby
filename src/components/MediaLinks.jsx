@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import "../../../static/assets/fonts/fontawesome/css/font-awesome.min.css";
-import {ButtonAsLink} from "../Styled/Button";
+import "../../static/assets/fonts/fontawesome/css/font-awesome.min.css";
+import {ButtonAsLink} from "./Styled/Button";
 
 const MediaContainer = styled.div`
     background: #111;
