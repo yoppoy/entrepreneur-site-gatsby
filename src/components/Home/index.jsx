@@ -31,6 +31,12 @@ const TextTitle = styled.h1`
     letter-spacing: 15px;
     color: #ececec;
     margin-bottom: 50px;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+        & {
+            font-size: 2.5em;
+        }
+    }
 `;
 
 const TextSubtitle = styled.h4`
@@ -41,11 +47,19 @@ const TextSubtitle = styled.h4`
     color: #ffba21;
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+     @media screen and (max-width: 768px) {
+        & {
+            font-size: 16px;
+        }
+    }
 `;
 
 const ButtonWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
+    display: block;
+    text-align: center;
 `;
 
 const Scroller = styled.a`
@@ -209,7 +223,7 @@ export default function Home({config}) {
             backgroundColor={`black`}
             id="home"
         >
-            <ParticleBackground params={particleConfig} visible={particlesVisible}/>
+            {/*<ParticleBackground params={particleConfig} visible={particlesVisible}/> */}
             <DarkWrapper>
                 <TextSubtitle>
                     <strong>{t('jobTitle')}</strong>

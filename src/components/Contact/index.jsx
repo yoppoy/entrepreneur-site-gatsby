@@ -112,8 +112,10 @@ export default function Contact({edges}) {
                     {edges.map(Contact => (
                         <Field key={Contact.node.id}>
                             <FieldIcon className={Contact.node.icon}/>
-                            <FieldHeading>{Contact.node.heading}</FieldHeading>
-                            <FieldValue>{documentToReactComponents(Contact.node.value.json)}</FieldValue>
+                            <FieldValue>
+                                <FieldHeading>{Contact.node.heading}</FieldHeading>
+                                {documentToReactComponents(Contact.node.value.json)}
+                            </FieldValue>
                         </Field>
                     ))}
                 </FieldContainer>
