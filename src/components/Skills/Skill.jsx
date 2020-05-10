@@ -9,8 +9,8 @@ const Icon = styled(InlineIcon)`
 `;
 
 const SkillContainer = styled.div`
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
     & > p {
         text-transform: uppercase;
         font-size: 14px;

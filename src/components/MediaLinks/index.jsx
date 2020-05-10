@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "../../../static/assets/fonts/fontawesome/css/font-awesome.min.css";
-import Button, {ButtonAsLink} from "../Styled/Button";
+import {ButtonAsLink} from "../Styled/Button";
 
 const MediaContainer = styled.div`
     background: #111;
@@ -9,12 +9,21 @@ const MediaContainer = styled.div`
     padding: 65px 0px;
 `;
 
+const Button = styled(ButtonAsLink)`
+  margin: 5px;
+`;
+
 const Seperator = styled.div`
     display: inline-block;
     height: 38px;
-    padding-right: 35px;
-    margin-right: 35px;
+    padding-right: 20px;
+    margin: 5px 20px 5px 5px;
     border-right: 1px solid #777;
+     @media screen and (max-width: 450px) {
+        & {
+            display: none;
+        }
+    }
 `;
 
 
@@ -24,10 +33,10 @@ export default function MediaLinks({edges}) {
             <MediaContainer>
                 {edges.map((MediaLink, index) => (
                     <React.Fragment key={MediaLink.node.id}>
-                        <ButtonAsLink href={MediaLink.node.link} target="_blank">
+                        <Button href={MediaLink.node.link} target="_blank">
                             {MediaLink.node.name + " "}
                             <i className={"fa " + MediaLink.node.icon}></i>
-                        </ButtonAsLink>
+                        </Button>
                         {index < edges.length - 1 && <Seperator/>}
                     </React.Fragment>
                 ))}

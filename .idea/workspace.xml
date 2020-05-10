@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/icons/flags/en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/icons/flags/fr.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaLinks/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Skills/Skill.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills/Skill.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/en.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,19 +41,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/assets/icons/particles" />
-      <recent name="$PROJECT_DIR$/src/components/Styled" />
-      <recent name="$PROJECT_DIR$/src/components/Home" />
-      <recent name="$PROJECT_DIR$/public/assets" />
-      <recent name="$PROJECT_DIR$/static/fonts" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/static/assets/fonts" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/icons/flags" />
+      <recent name="$PROJECT_DIR$/static/assets/icons" />
+      <recent name="$PROJECT_DIR$/static/assets/icons/particles" />
+      <recent name="$PROJECT_DIR$/src/components/Styled" />
+      <recent name="$PROJECT_DIR$/src/components/Home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,7 +85,7 @@
       <workItem from="1588176798233" duration="946000" />
       <workItem from="1588181680261" duration="30324000" />
       <workItem from="1588380263730" duration="8621000" />
-      <workItem from="1589142917055" duration="666000" />
+      <workItem from="1589142917055" duration="3425000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -349,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588609374674</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix (resize home + contact)">
+      <created>1589143678226</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1589143678226</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +380,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix (contact / testimony)" />
     <MESSAGE value="add (updated site config + gatsby image api)" />
     <MESSAGE value="fix (blocked social media from adblock)" />
     <MESSAGE value="add (home with scrolling)" />
@@ -394,6 +404,7 @@
     <MESSAGE value="fix (performance issues with icons)" />
     <MESSAGE value="add (custom icons from simple icons)" />
     <MESSAGE value="fix (remove nprogress)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (remove nprogress)" />
+    <MESSAGE value="fix (resize home + contact)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (resize home + contact)" />
   </component>
 </project>

@@ -6,6 +6,8 @@ import '../../../static/assets/fonts/anders/css/style.css';
 import '../../../static/assets/fonts/linea-font/css/linea-font.css';
 import {Particles} from 'react-particles-js';
 import {ButtonAnchor} from "../Styled/Button";
+import {AnchorLink} from "gatsby-plugin-anchor-links";
+import Header from "../Header";
 
 const HomeWrapper = styled(BackgroundImage)`
     background-size: cover;
@@ -34,7 +36,12 @@ const TextTitle = styled.h1`
     text-align: center;
     @media screen and (max-width: 768px) {
         & {
-            font-size: 2.5em;
+            font-size: 3em;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        & {
+            font-size: 2em;
         }
     }
 `;
@@ -52,6 +59,11 @@ const TextSubtitle = styled.h4`
     padding-right: 10px;
      @media screen and (max-width: 768px) {
         & {
+            font-size: 20px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        & {
             font-size: 16px;
         }
     }
@@ -62,7 +74,7 @@ const ButtonWrapper = styled.div`
     text-align: center;
 `;
 
-const Scroller = styled.a`
+const Scroller = styled(AnchorLink)`
     display: inline-block;
     position: absolute;
     bottom: 15px;
@@ -72,7 +84,7 @@ const Scroller = styled.a`
     margin: 0 auto;
     font-size: 40px;
     text-align: center;
-    color: rgba(255, 255, 255,0.8);
+        color: #ebebeb;
     &:focus {
         color: inherit;
         text-decoration: none;
@@ -214,7 +226,7 @@ export default function Home({config}) {
         setTimeout(() => {
             setVisibleParticles(true);
         }, 200);
-    });
+    }, []);
 
     return (
         <HomeWrapper
@@ -223,7 +235,8 @@ export default function Home({config}) {
             backgroundColor={`black`}
             id="home"
         >
-            {/*<ParticleBackground params={particleConfig} visible={particlesVisible}/> */}
+            <Header/>
+            <ParticleBackground params={particleConfig} visible={particlesVisible}/>
             <DarkWrapper>
                 <TextSubtitle>
                     <strong>{t('jobTitle')}</strong>
@@ -244,7 +257,7 @@ export default function Home({config}) {
                     </ButtonAnchor>
                 </ButtonWrapper>
             </DarkWrapper>
-            <Scroller href="#services">
+            <Scroller to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}>
                 <span className={"scroller-text"}>{t('profile')}</span>
                 <span className="linea-arrows-down-double-34"></span>
             </Scroller>
