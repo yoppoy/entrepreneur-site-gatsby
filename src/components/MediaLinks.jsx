@@ -33,7 +33,7 @@ export default function MediaLinks({edges}) {
             <MediaContainer>
                 {edges.map((MediaLink, index) => (
                     <React.Fragment key={MediaLink.node.id}>
-                        <Button href={MediaLink.node.link} target="_blank">
+                        <Button href={MediaLink.node.link} target="_blank" rel="noopener">
                             {MediaLink.node.name + " "}
                             <i className={"fa " + MediaLink.node.icon}></i>
                         </Button>
