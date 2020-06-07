@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import styled from "styled-components";
 import {useTranslation} from 'react-i18next';
 import BackgroundImage from 'gatsby-background-image';
+import Fade from 'react-reveal/Fade';
 import '../../static/assets/fonts/anders/css/style.css';
 import '../../static/assets/fonts/linea-font/css/linea-font.css';
 import {Particles} from 'react-particles-js';
@@ -220,13 +221,6 @@ const particleConfig = {
 
 export default function Home({config}) {
     const {t} = useTranslation();
-    const [particlesVisible, setVisibleParticles] = useState(false);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setVisibleParticles(true);
-        }, 200);
-    }, []);
 
     return (
         <HomeWrapper
@@ -236,26 +230,34 @@ export default function Home({config}) {
             id="home"
         >
             <Header/>
-            <ParticleBackground params={particleConfig} visible={particlesVisible}/>
+            <Fade delay={100}>
+                <ParticleBackground params={particleConfig} visible={true}/>
+            </Fade>
             <DarkWrapper>
-                <TextSubtitle>
-                    <strong>{t('jobTitle')}</strong>
-                </TextSubtitle>
-                <TextTitle>Yan Poinssot</TextTitle>
-                <ButtonWrapper>
-                    <ButtonAnchor
-                        to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
-                        title={t('sectionSkills')}>
-                        {t('sectionSkills')}
-                    </ButtonAnchor>
-                    <ButtonAnchor
-                        to={(typeof window !== `undefined`) ? window.location.pathname + "#contact" : "#contact"}
-                        title={t('sectionContact')}
-                        filled={true}
-                    >
-                        {t('sectionContact')}
-                    </ButtonAnchor>
-                </ButtonWrapper>
+                <Fade delay={100} bottom distance={'20px'}>
+                    <TextSubtitle>
+                        <strong>{t('jobTitle')}</strong>
+                    </TextSubtitle>
+                </Fade>
+                <Fade top distance={'30px'} >
+                    <TextTitle>Yan Poinssot</TextTitle>
+                </Fade>
+                <Fade delay={500}>
+                    <ButtonWrapper>
+                        <ButtonAnchor
+                            to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
+                            title={t('sectionSkills')}>
+                            {t('sectionSkills')}
+                        </ButtonAnchor>
+                        <ButtonAnchor
+                            to={(typeof window !== `undefined`) ? window.location.pathname + "#contact" : "#contact"}
+                            title={t('sectionContact')}
+                            filled={true}
+                        >
+                            {t('sectionContact')}
+                        </ButtonAnchor>
+                    </ButtonWrapper>
+                </Fade>
             </DarkWrapper>
             <Scroller to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}>
                 <span className={"scroller-text"}>{t('profile')}</span>

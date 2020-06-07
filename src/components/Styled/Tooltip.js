@@ -78,7 +78,7 @@ const Tooltip = styled.a`
         border-top-color: #000;
         border-bottom: none;
         bottom: 101%;
-        left: calc(50% - 6px);
+        left: calc(50% - 9px);
         margin-bottom: 4px;
     }
 `;

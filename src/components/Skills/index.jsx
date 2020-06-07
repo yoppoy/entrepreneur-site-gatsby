@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import SectionTitle from "../Styled/SectionTitle";
+import Fade from 'react-reveal/Fade'
 import {useTranslation} from "react-i18next";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import "./ProgressBar.css"
@@ -19,6 +20,12 @@ const CardWrapper = styled.div`
     & {
       max-width: 1200px;
     }
+  }
+  & > .div {
+    padding: 15px;
+    width: 33.333%;
+    display: inline-block;
+    vertical-align: top;
   }
 `;
 
@@ -71,16 +78,18 @@ export default function Skills({edges}) {
         <Wrapper id={"skills"}>
             <SectionTitle style={{marginBottom: 50}}>{t('sectionSkills')}</SectionTitle>
             <CardWrapper>
-                {edges.map((skillCard) => {
+                {edges.map((skillCard, index) => {
                     return (
                         <Card key={skillCard.node.id}>
-                            <div>
-                                <span className={skillCard.node.icon}/>
-                                {documentToReactComponents(skillCard.node.title.json)}
+                            <Fade bottom delay={index * 100} distance={'100px'}>
                                 <div>
-                                    {skillCard.node.data.map((skill) => <Skill key={skill.name} skill={skill}/>)}
+                                    <span className={skillCard.node.icon}/>
+                                    {documentToReactComponents(skillCard.node.title.json)}
+                                    <div>
+                                        {skillCard.node.data.map((skill) => <Skill key={skill.name} skill={skill}/>)}
+                                    </div>
                                 </div>
-                            </div>
+                            </Fade>
                         </Card>
                     )
                 })}

@@ -7,7 +7,6 @@ import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 
 const Container = styled.div`
     background: #111;
-    position: relative;
 `;
 
 const TestimonialsSlider = styled(Slider)`
@@ -15,6 +14,7 @@ const TestimonialsSlider = styled(Slider)`
     padding-bottom: 60px;
     width: 55%;
     margin: 0 auto;
+    background: rgba(17,17,17,0.7);
     @media (max-width: 770px) {
         & {
             width: 80%;
