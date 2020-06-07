@@ -229,19 +229,19 @@ export default function Home({config}) {
             id="home"
         >
             <Header/>
-            <Fade ssrFadeout delay={100}>
+            <Fade ssrReveal delay={100}>
                 <ParticleBackground params={particleConfig}/>
             </Fade>
             <DarkWrapper>
-                <Fade ssrFadeout delay={100} bottom distance={'20px'}>
+                <Fade ssrReveal delay={100} bottom distance={'20px'}>
                     <TextSubtitle>
                         <strong>{t('jobTitle')}</strong>
                     </TextSubtitle>
                 </Fade>
-                <Fade ssrFadeout top distance={'30px'}>
+                <Fade ssrReveal top distance={'30px'}>
                     <TextTitle>Yan Poinssot</TextTitle>
                 </Fade>
-                <Fade ssrFadeout delay={500} ssrReveal>
+                <Fade ssrReveal delay={500} ssrReveal>
                     <ButtonWrapper>
                         <ButtonAnchor
                             to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
