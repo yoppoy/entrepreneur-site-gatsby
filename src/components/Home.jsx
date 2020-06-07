@@ -123,7 +123,6 @@ const ParticleBackground = styled(Particles)`
     width: 100vw;
     background: none;
     position: fixed;
-    opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1000ms ease;
 `;
 
@@ -231,7 +230,7 @@ export default function Home({config}) {
         >
             <Header/>
             <Fade delay={100}>
-                <ParticleBackground params={particleConfig} visible={true}/>
+                <ParticleBackground params={particleConfig}/>
             </Fade>
             <DarkWrapper>
                 <Fade delay={100} bottom distance={'20px'}>
