@@ -81,7 +81,7 @@ export default function Skills({edges}) {
                 {edges.map((skillCard, index) => {
                     return (
                         <Card key={skillCard.node.id}>
-                            <Fade bottom delay={index * 100} distance={'100px'}>
+                            <Fade ssrFadeout bottom delay={index * 100} distance={'100px'}>
                                 <div>
                                     <span className={skillCard.node.icon}/>
                                     {documentToReactComponents(skillCard.node.title.json)}

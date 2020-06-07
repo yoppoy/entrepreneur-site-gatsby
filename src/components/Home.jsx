@@ -229,28 +229,34 @@ export default function Home({config}) {
             id="home"
         >
             <Header/>
-            <Fade delay={100}>
+            <Fade ssrFadeout delay={100}>
                 <ParticleBackground params={particleConfig}/>
             </Fade>
             <DarkWrapper>
-                <TextSubtitle>
-                    <strong>{t('jobTitle')}</strong>
-                </TextSubtitle>
-                <TextTitle>Yan Poinssot</TextTitle>
-                <ButtonWrapper>
-                    <ButtonAnchor
-                        to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
-                        title={t('sectionSkills')}>
-                        {t('sectionSkills')}
-                    </ButtonAnchor>
-                    <ButtonAnchor
-                        to={(typeof window !== `undefined`) ? window.location.pathname + "#contact" : "#contact"}
-                        title={t('sectionContact')}
-                        filled={true}
-                    >
-                        {t('sectionContact')}
-                    </ButtonAnchor>
-                </ButtonWrapper>
+                <Fade ssrFadeout delay={100} bottom distance={'20px'}>
+                    <TextSubtitle>
+                        <strong>{t('jobTitle')}</strong>
+                    </TextSubtitle>
+                </Fade>
+                <Fade ssrFadeout top distance={'30px'}>
+                    <TextTitle>Yan Poinssot</TextTitle>
+                </Fade>
+                <Fade ssrFadeout delay={500} ssrReveal>
+                    <ButtonWrapper>
+                        <ButtonAnchor
+                            to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
+                            title={t('sectionSkills')}>
+                            {t('sectionSkills')}
+                        </ButtonAnchor>
+                        <ButtonAnchor
+                            to={(typeof window !== `undefined`) ? window.location.pathname + "#contact" : "#contact"}
+                            title={t('sectionContact')}
+                            filled={true}
+                        >
+                            {t('sectionContact')}
+                        </ButtonAnchor>
+                    </ButtonWrapper>
+                </Fade>
             </DarkWrapper>
             <Scroller to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}>
                 <span className={"scroller-text"}>{t('profile')}</span>

@@ -86,7 +86,7 @@
       <workItem from="1588380263730" duration="8621000" />
       <workItem from="1589142917055" duration="5009000" />
       <workItem from="1589148750291" duration="116000" />
-      <workItem from="1591535368212" duration="6357000" />
+      <workItem from="1591535368212" duration="6812000" />
     </task>
     <task id="LOCAL-00001" summary="add (basic timeline functional)">
       <created>1587563666785</created>
@@ -396,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591564691019</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="fix (remove text animations)">
+      <created>1591565208542</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1591565208542</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix (remove preloader)" />
     <MESSAGE value="fix (root redirect)" />
     <MESSAGE value="fix (remove offline plugin)" />
     <MESSAGE value="add (webp background images)" />
@@ -441,6 +447,7 @@
     <MESSAGE value="add (favicon)" />
     <MESSAGE value="add (reveal animations)" />
     <MESSAGE value="fix (unused prop)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (unused prop)" />
+    <MESSAGE value="fix (remove text animations)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (remove text animations)" />
   </component>
 </project>

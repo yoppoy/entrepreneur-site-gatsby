@@ -49,7 +49,7 @@ export default function Index({edges, config}) {
                                         )}
                                     </TimelineDot>
                                     <TimelineCompany>
-                                        <Fade distance={'50px'} left={index % 2 === 0} right={index % 2 !== 0}>
+                                        <Fade ssrFadeout distance={'50px'} left={index % 2 === 0} right={index % 2 !== 0}>
                                             <Img
                                                 fluid={Experience.node.companyLogo.fluid}
                                                 style={{maxHeight: 135, width: 230}}
@@ -57,7 +57,7 @@ export default function Index({edges, config}) {
                                             />
                                         </Fade>
                                     </TimelineCompany>
-                                    <Fade distance={'50px'} left={index % 2 !== 0} right={index % 2 === 0}
+                                    <Fade ssrFadeout distance={'50px'} left={index % 2 !== 0} right={index % 2 === 0}
                                           delay={index * 50}>
                                         <TimelineContent>
                                             <TimelineDate>
