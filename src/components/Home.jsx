@@ -228,8 +228,8 @@ export default function Home({config}) {
             backgroundColor={`black`}
             id="home"
         >
-            <Header/>
             <Fade ssrReveal delay={100}>
+                <Header/>
                 <ParticleBackground params={particleConfig}/>
             </Fade>
             <DarkWrapper>
@@ -241,7 +241,7 @@ export default function Home({config}) {
                 <Fade ssrReveal top distance={'30px'}>
                     <TextTitle>Yan Poinssot</TextTitle>
                 </Fade>
-                <Fade ssrReveal delay={500} ssrReveal>
+                <Fade ssrReveal delay={500}>
                     <ButtonWrapper>
                         <ButtonAnchor
                             to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}
@@ -259,8 +259,10 @@ export default function Home({config}) {
                 </Fade>
             </DarkWrapper>
             <Scroller to={(typeof window !== `undefined`) ? window.location.pathname + "#skills" : "#skills"}>
-                <span className={"scroller-text"}>{t('profile')}</span>
-                <span className="linea-arrows-down-double-34"></span>
+                <Fade ssrReveal delay={1000}>
+                    <span className={"scroller-text"}>{t('profile')}</span>
+                    <span className="linea-arrows-down-double-34"></span>
+                </Fade>
             </Scroller>
         </HomeWrapper>
     )
