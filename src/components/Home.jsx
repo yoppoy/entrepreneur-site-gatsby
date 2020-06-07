@@ -229,8 +229,10 @@ export default function Home({config}) {
             id="home"
         >
             <Fade ssrReveal delay={100}>
-                <Header/>
                 <ParticleBackground params={particleConfig}/>
+            </Fade>
+            <Fade ssrReveal delay={100}>
+                <Header/>
             </Fade>
             <DarkWrapper>
                 <Fade ssrReveal delay={100} bottom distance={'20px'}>
