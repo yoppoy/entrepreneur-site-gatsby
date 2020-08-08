@@ -5,6 +5,7 @@ import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
+    background: white;
     padding-top: 160px;
     padding-bottom: 160px;
     & ${SectionTitle} {

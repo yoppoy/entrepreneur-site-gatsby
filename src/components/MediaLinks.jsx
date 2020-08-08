@@ -29,7 +29,7 @@ const Seperator = styled.div`
 
 export default function MediaLinks({edges}) {
     return (
-        <section id={"social"}>
+        <section id={"social"} style={{position: 'relative'}}>
             <MediaContainer>
                 {edges.map((MediaLink, index) => (
                     <React.Fragment key={MediaLink.node.id}>
