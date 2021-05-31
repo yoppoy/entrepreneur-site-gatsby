@@ -4,7 +4,7 @@ const config = {
     siteTitleAlt: "Développeur React / Node.js", // Alternative site title for SEO.
     siteDescription: "Yan Poinssot, développeur web fullstack React / Node.js", // Website description used for RSS feeds/meta description tag.
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest. TODO Change logo
-    siteUrl: "https://distracted-wozniak-a09bf9.netlify.app", // Domain of your website without pathPrefix.
+    siteUrl: "https://yan-poinssot.netlify.app", // Domain of your website without pathPrefix.
     pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
     siteFBAppID: "none", // FB Application ID for using app insights
     googleAnalyticsID: "none", // GA tracking ID.
@@ -22,12 +22,7 @@ const config = {
 };
 
 // Validate
-
-// Make sure pathPrefix is empty if not needed
-if (config.pathPrefix === "/") {
-    config.pathPrefix = "";
-} else {
-    // Make sure pathPrefix only contains the first forward slash
+if (config.pathPrefix !== "/") {
     config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, "")}`;
 }
 

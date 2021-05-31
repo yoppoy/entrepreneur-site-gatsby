@@ -3,14 +3,16 @@ import {graphql} from "gatsby";
 import HomePage from "../components/HomePage";
 import MainLayout from "../layout";
 
-export default (props) => (
-    <MainLayout locale={"fr"}>
-        <HomePage {...props}/>
-    </MainLayout>
-);
+export default (props) => {
+    return (
+        <MainLayout locale={"fr"}>
+            <HomePage {...props}/>
+        </MainLayout>
+    );
+}
 
 export const query = graphql`
-    query HomeFrQuery {
+    query HomeQuery($locale: String!) {
         allContentfulSiteConfiguration {
             edges {
                 node {
@@ -20,20 +22,20 @@ export const query = graphql`
                         }
                     }
                     backgroundExperience {
-                        fluid(quality: 80) {
+                        fluid(quality: 87) {
                             ...GatsbyContentfulFluid
                         }
                     }
                 }
             }
         }
-        allContentfulSkillsCard(filter: {node_locale: {eq: "fr"}}, sort: {fields: slug}) {
+        allContentfulSkillsCard(filter: {node_locale: {eq: $locale}}, sort: {fields: slug}) {
             edges {
                 node {
                     id
                     icon
                     title {
-                        json
+                        raw
                     }
                     data {
                         icon
@@ -43,13 +45,13 @@ export const query = graphql`
                 }
             }
         }
-        allContentfulExperience(filter: {node_locale: {eq: "fr"}}, sort: {fields: dateStart, order: DESC}) {
+        allContentfulExperience(filter: {node_locale: {eq: $locale}}, sort: {fields: dateStart, order: DESC}) {
             edges {
                 node {
                     id
                     title
-                    dateStart(formatString: "MMMM YYYY", locale: "fr")
-                    dateEnd(formatString: "MMMM YYYY", locale: "fr")
+                    dateStart(formatString: "MMMM YYYY", locale: $locale)
+                    dateEnd(formatString: "MMMM YYYY", locale: $locale)
                     type
                     icons {
                         data {
@@ -58,20 +60,18 @@ export const query = graphql`
                         }
                     }
                     description {
-                        json
+                        raw
                     }
                     companyName
                     companyLink
                     companyLogo {
                         title
-                        fluid {
-                            ...GatsbyContentfulFluid
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                 }
             }
         }
-        allContentfulTestimonial(filter: {node_locale: {eq: "fr"}}, sort: {fields: date, order: DESC}) {
+        allContentfulTestimonial(filter: {node_locale: {eq: $locale}}, sort: {fields: date, order: DESC}) {
             edges {
                 node {
                     id
@@ -81,24 +81,24 @@ export const query = graphql`
                     date(formatString: "YYYY")
                     companyName
                     testimony {
-                        json
+                        raw
                     }
                 }
             }
         }
-        allContentfulContact(sort: {fields: slug}, filter: {node_locale: {eq: "fr"}}) {
+        allContentfulContact(sort: {fields: slug}, filter: {node_locale: {eq: $locale}}) {
             edges {
                 node {
                     id
                     icon
                     value {
-                        json
+                        raw
                     }
                     heading
                 }
             }
         }
-        allContentfulMediaLink(sort: {fields: slug}, filter: {node_locale: {eq: "fr"}}) {
+        allContentfulMediaLink(sort: {fields: slug}, filter: {node_locale: {eq: $locale}}) {
             edges {
                 node {
                     id

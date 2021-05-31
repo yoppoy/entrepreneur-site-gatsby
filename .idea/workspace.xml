@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6b593824-ca3c-4116-8139-b43036afd64e" name="Default Changelist" comment="fix (rel security)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SiteConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/SiteConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.en.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.fr.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.fr.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$USER_HOME$/work/entrepreneur-site/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/work/entrepreneur-site/public/index.html" beforeDir="false" afterPath="$USER_HOME$/work/entrepreneur-site/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GraphQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/icons/simple-icons-custom" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -437,6 +445,14 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/gatsby-plugin-sharp/safe-sharp.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/selection-is-backward/index.d.ts" />
+        <option value="$PROJECT_DIR$/node_modules/selection-is-backward/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/gatsby-plugin-sharp/safe-sharp.d.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
