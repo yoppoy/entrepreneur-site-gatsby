@@ -1,7 +1,7 @@
 const urljoin = require("url-join");
 const path = require("path");
-const config = require("./data/SiteConfig");
 const dotenv = require("dotenv");
+const config = require("./data/SiteConfig");
 
 dotenv.config({
     path: `.env.${process.env.NODE_ENV}`,
@@ -25,13 +25,6 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-i18n',
-            options: {
-                langKeyDefault: 'fr',
-                useLangKeyLayout: false
-            }
-        },
-        {
             resolve: `gatsby-plugin-webfonts`,
             options: {
                  fonts: {
@@ -49,7 +42,7 @@ module.exports = {
                         },
                     ],
                 },
-                //formats: ['woff2', 'woff'],
+                // formats: ['woff2', 'woff'],
                 useMinify: true,
                 usePreload: true,
                 usePreconnect: false,

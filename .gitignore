@@ -2,7 +2,6 @@
 # Logs
 logs
 *.log
-npm-debug.log*
 
 # Runtime data
 pids
@@ -61,5 +60,5 @@ public/
 bundle-stats.json
 
 #IDE
-.idea
+.idea*
 .DS_Store

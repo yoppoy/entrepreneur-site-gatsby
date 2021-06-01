@@ -1,77 +1,78 @@
-import React, { Component } from "react";
-import Helmet from "react-helmet";
-import urljoin from "url-join";
-import moment from "moment";
-import config from "../../data/SiteConfig";
+import React, { Component } from 'react'
+
+import Helmet from 'react-helmet'
+import urljoin from 'url-join'
+
+import config from '@data/SiteConfig'
 
 class SEO extends Component {
   render() {
-    const { postNode, postPath, postSEO } = this.props;
-    let title;
-    let description;
-    let image;
-    let postURL;
+    const { postNode, postPath, postSEO } = this.props
+    let title
+    let description
+    let image
+    let postURL
 
     if (postSEO) {
-      const postMeta = postNode.frontmatter;
-      ({ title } = postMeta);
+      const postMeta = postNode.frontmatter
+      ;({ title } = postMeta)
       description = postMeta.description
         ? postMeta.description
-        : postNode.excerpt;
-      image = postMeta.cover;
-      postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
+        : postNode.excerpt
+      image = postMeta.cover
+      postURL = urljoin(config.siteUrl, config.pathPrefix, postPath)
     } else {
-      title = config.siteTitle;
-      description = config.siteDescription;
-      image = config.siteLogo;
+      title = config.siteTitle
+      description = config.siteDescription
+      image = config.siteLogo
     }
 
-    const getImagePath = imageURI => {
+    const getImagePath = (imageURI) => {
       if (
         !imageURI.match(
           `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
         )
       )
-        return urljoin(config.siteUrl, config.pathPrefix, imageURI);
+        return urljoin(config.siteUrl, config.pathPrefix, imageURI)
 
-      return imageURI;
-    };
+      return imageURI
+    }
 
-    image = getImagePath(image);
+    image = getImagePath(image)
 
     const authorJSONLD = {
-      "@type": "Person",
+      '@type': 'Person',
       name: config.userName,
       email: config.userEmail,
       address: config.userLocation
-    };
+    }
 
     const logoJSONLD = {
-      "@type": "ImageObject",
+      '@type': 'ImageObject',
       url: getImagePath(config.siteLogo)
-    };
+    }
 
-    const blogURL = urljoin(config.siteUrl, config.pathPrefix);
+    const blogURL = urljoin(config.siteUrl, config.pathPrefix)
     const schemaOrgJSONLD = [
       {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
+        '@context': 'http://schema.org',
+        '@type': 'WebSite',
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ""
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ''
       }
-    ];
+    ]
     if (postSEO) {
       schemaOrgJSONLD.push(
         {
-          "@context": "http://schema.org",
-          "@type": "BreadcrumbList",
+          '@context': 'http://schema.org',
+          '@type': 'BreadcrumbList',
           itemListElement: [
             {
-              "@type": "ListItem",
+              '@type': 'ListItem',
               position: 1,
               item: {
-                "@id": postURL,
+                '@id': postURL,
                 name: title,
                 image
               }
@@ -79,22 +80,22 @@ class SEO extends Component {
           ]
         },
         {
-          "@context": "http://schema.org",
-          "@type": "BlogPosting",
+          '@context': 'http://schema.org',
+          '@type': 'BlogPosting',
           url: blogURL,
           name: title,
-          alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
+          alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
           headline: title,
-          image: { "@type": "ImageObject", url: image },
+          image: { '@type': 'ImageObject', url: image },
           author: authorJSONLD,
           publisher: {
             ...authorJSONLD,
-            "@type": "Organization",
+            '@type': 'Organization',
             logo: logoJSONLD
           },
           description
         }
-      );
+      )
     }
     return (
       <Helmet>
@@ -115,21 +116,21 @@ class SEO extends Component {
         <meta property="og:image" content={image} />
         <meta
           property="fb:app_id"
-          content={config.siteFBAppID ? config.siteFBAppID : ""}
+          content={config.siteFBAppID ? config.siteFBAppID : ''}
         />
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:creator"
-          content={config.userTwitter ? config.userTwitter : ""}
+          content={config.userTwitter ? config.userTwitter : ''}
         />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
       </Helmet>
-    );
+    )
   }
 }
 
-export default SEO;
+export default SEO
