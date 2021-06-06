@@ -1,7 +1,7 @@
 {
-  "jobTitle": "Fullstack JS Web Developer",
+  "job_title": "Fullstack JS Web Developer",
   "profile": "My profile",
-  "sectionSkills": "Skills",
-  "sectionTimeline": "Experience",
-  "sectionContact": "Get in touch"
+  "section_skills.title": "Skills",
+  "section_timeline.title": "Experience",
+  "section_contact.title": "Get in touch"
 }
