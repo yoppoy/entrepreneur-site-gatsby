@@ -1,28 +1,32 @@
 import React, { FC } from 'react'
 
+import { HomePageMediaLink } from '@custom-types/contentfulSimplifiedTypes'
+
 import * as Styled from './MediaLinks.styled'
 
 import '@static/assets/fonts/fontawesome/css/font-awesome.min.css'
 
 type MediaLinksProps = {
-  edges: any /* @todo - graphql-codegen */
+  links: Array<HomePageMediaLink>
 }
 
-const MediaLinks: FC<MediaLinksProps> = ({ edges }) => {
+const MediaLinks: FC<MediaLinksProps> = ({ links }) => {
   return (
     <section id="social" style={{ position: 'relative' }}>
       <Styled.MediaContainer>
-        {edges.map((MediaLink, index) => (
-          <React.Fragment key={MediaLink.node.id}>
-            <Styled.Button
-              href={MediaLink.node.link}
-              target="_blank"
-              rel="noopener"
-            >
-              {`${MediaLink.node.name} `}
-              <i className={`fa ${MediaLink.node.icon}`} />
-            </Styled.Button>
-            {index < edges.length - 1 && <Styled.Seperator />}
+        {links.map((mediaLink, index) => (
+          <React.Fragment key={mediaLink.id}>
+            {mediaLink.link && (
+              <Styled.ButtonLink
+                href={mediaLink.link}
+                target="_blank"
+                rel="noopener"
+              >
+                {`${mediaLink.name} `}
+                <i className={`fa ${mediaLink.icon}`} />
+              </Styled.ButtonLink>
+            )}
+            {index < links.length - 1 && <Styled.Seperator />}
           </React.Fragment>
         ))}
       </Styled.MediaContainer>

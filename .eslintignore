@@ -3,3 +3,4 @@ static
 .cache
 content
 gatsby-*
+**/types/codegenContentfulTypes.ts

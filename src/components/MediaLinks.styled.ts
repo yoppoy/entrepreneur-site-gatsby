@@ -6,10 +6,10 @@ import { ButtonAsLink } from './_shared/Button'
 export const MediaContainer = styled.div`
   background: #111;
   text-align: center;
-  padding: 65px 0px;
+  padding: 65px 0;
 `
 
-export const Button = styled(ButtonAsLink)`
+export const ButtonLink = styled(ButtonAsLink)`
   margin: 5px;
 `
 

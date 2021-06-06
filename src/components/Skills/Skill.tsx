@@ -3,6 +3,8 @@ import React, { FC } from 'react'
 import InlineIcon from '@iconify/react'
 import styled from 'styled-components'
 
+import { ContentfulSkillsCardDataJsonNode } from '@custom-types/codegenContentfulTypes'
+
 import getCustomIcon from '@utils/simple-icons'
 
 const Icon = styled(InlineIcon)`
@@ -23,14 +25,13 @@ const SkillContainer = styled.div`
   }
 `
 
-type SkillProps = {
-  name: string
-  score: number
-  icon: string
-}
+type SkillProps = Pick<
+  ContentfulSkillsCardDataJsonNode,
+  'icon' | 'score' | 'name'
+>
 
 const Skill: FC<SkillProps> = ({ name, score, icon }) => {
-  const jsxIcon = getCustomIcon(icon)
+  const jsxIcon = icon ? getCustomIcon(icon) : null
 
   return (
     <SkillContainer>
@@ -39,11 +40,10 @@ const Skill: FC<SkillProps> = ({ name, score, icon }) => {
         <strong>{name}</strong>
       </p>
       <ol className="progress-bar-custom">
-        {score >= 1 ? <li className="is-complete" /> : <li />}
-        {score >= 2 ? <li className="is-complete" /> : <li />}
-        {score >= 3 ? <li className="is-complete" /> : <li />}
-        {score >= 4 ? <li className="is-complete" /> : <li />}
-        {score >= 5 ? <li className="is-complete" /> : <li />}
+        {[...Array(5)].map((_, index) => {
+          if (score && score > index) return <li className="is-complete" />
+          return <li />
+        })}
       </ol>
     </SkillContainer>
   )

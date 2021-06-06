@@ -18,15 +18,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "typeRoots": ["src/@types"],
+    "typeRoots": [
+      "src/@types"
+    ],
     "paths": {
       "@data/*": ["data/*"],
       "@components/*": ["src/components/*"],
       "@i18n/*": ["src/i18n/*"],
       "@layout/*": ["src/layout/*"],
       "@templates/*": ["src/templates/*"],
+      "@custom-types/*": ["src/types/*"],
       "@utils/*": ["src/utils/*"],
-      "@static/*": ["static/*"],
+      "@static/*": ["static/*"]
     }
   },
   "exclude": ["node_modules", "public", ".cache", "README.md"],

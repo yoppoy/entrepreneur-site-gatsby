@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
+import { HomePageTestimonial } from '@custom-types/contentfulSimplifiedTypes'
+
 import * as Styled from './Testimonials.styled'
 
 const SliderArrow = ({
@@ -24,10 +26,10 @@ const SliderArrow = ({
 )
 
 type TestimonialsProps = {
-  edges: any /* @todo - graphql-codegen */
+  testimonials: Array<HomePageTestimonial>
 }
 
-const Testimonials: FC<TestimonialsProps> = ({ edges }) => {
+const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
   const sliderConfig = {
     autoplay: false,
     autoplaySpeed: 4000,
@@ -41,20 +43,21 @@ const Testimonials: FC<TestimonialsProps> = ({ edges }) => {
     <section id="testimonials">
       <Styled.Container>
         <Styled.TestimonialsSlider {...sliderConfig}>
-          {edges.map((Testimonial: any) => {
+          {testimonials.map((testimonial) => {
             return (
-              <Styled.TestimonialBody key={Testimonial.node.id}>
-                {documentToReactComponents(
-                  JSON.parse(Testimonial.node.testimony.raw)
-                )}
+              <Styled.TestimonialBody key={testimonial.id}>
+                {testimonial?.testimony?.raw &&
+                  documentToReactComponents(
+                    JSON.parse(testimonial.testimony.raw)
+                  )}
                 <div className="et-quote" />
                 <div>
                   <h5 className="referral">
-                    {Testimonial.node.firstName} {Testimonial.node.lastName} -{' '}
-                    {Testimonial.node.date}
+                    {testimonial.firstName} {testimonial.lastName} -{' '}
+                    {testimonial.date}
                   </h5>
                   <h5 className="referral-info">
-                    {Testimonial.node.jobTitle} - {Testimonial.node.companyName}
+                    {testimonial.jobTitle} - {testimonial.companyName}
                   </h5>
                 </div>
               </Styled.TestimonialBody>

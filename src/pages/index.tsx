@@ -1,18 +1,56 @@
 import React, { FC } from 'react'
 
 import { graphql, PageProps } from 'gatsby'
+import Helmet from 'react-helmet'
 
-import HomePage from '@components/_pages/PageHome'
+import { HomePageQuery } from '@custom-types/codegenContentfulTypes'
+
+import Contact from '@components/Contact/Contact'
+import Home from '@components/Home/Home'
+import MediaLinks from '@components/MediaLinks'
+import Skills from '@components/Skills/Skills'
+import Testimonials from '@components/Testimonials'
+import Timeline from '@components/Timeline/Timeline'
+import SiteConfig from '@data/SiteConfig'
 import MainLayout from '@layout/index'
 
+const filterHomePageData = (data: HomePageQuery) => {
+  return {
+    siteConfiguration: data.allContentfulSiteConfiguration.edges[0].node,
+    skills: data.allContentfulSkillsCard.edges.map((edge) => edge.node),
+    experiences: data.allContentfulExperience.edges.map((edge) => edge.node),
+    testimonials: data.allContentfulTestimonial.edges.map((edge) => edge.node),
+    contacts: data.allContentfulContact.edges.map((edge) => edge.node),
+    mediaLinks: data.allContentfulMediaLink.edges.map((edge) => edge.node)
+  }
+}
+
 const PageHome: FC<PageProps<
-  Record<string, unknown>,
+  HomePageQuery,
   { locale: string },
   Record<string, unknown>
->> = ({ pageContext, ...props }) => {
+>> = ({ pageContext, data }) => {
+  const {
+    siteConfiguration,
+    skills,
+    experiences,
+    testimonials,
+    contacts,
+    mediaLinks
+  } = filterHomePageData(data)
+
   return (
     <MainLayout locale={pageContext.locale}>
-      <HomePage {...props} />
+      <Helmet title={SiteConfig.siteTitle} />
+      <Home background={siteConfiguration.backgroundHome} />
+      <Skills cards={skills} />
+      <Timeline
+        experiences={experiences}
+        background={siteConfiguration.backgroundExperience}
+      />
+      <Testimonials testimonials={testimonials} />
+      <Contact contacts={contacts} />
+      <MediaLinks links={mediaLinks} />
     </MainLayout>
   )
 }
@@ -20,18 +58,26 @@ const PageHome: FC<PageProps<
 export default PageHome
 
 export const query = graphql`
-  query HomeQuery($locale: String!) {
+  query HomePage($locale: String!) {
     allContentfulSiteConfiguration {
       edges {
         node {
           backgroundHome {
             fluid(quality: 87) {
-              ...GatsbyContentfulFluid
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
           backgroundExperience {
             fluid(quality: 87) {
-              ...GatsbyContentfulFluid
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
         }
@@ -81,7 +127,11 @@ export const query = graphql`
           companyLogo {
             title
             fluid {
-              ...GatsbyContentfulFluid
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
         }

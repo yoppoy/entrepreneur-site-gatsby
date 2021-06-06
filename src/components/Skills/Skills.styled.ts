@@ -44,7 +44,7 @@ export const Card = styled.div`
   & > div {
     border: 1px solid #f8f8f8;
     background: #fff;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     padding: 40px 50px;
     display: block;
     & > span {

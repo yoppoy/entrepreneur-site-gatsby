@@ -38,26 +38,25 @@ export const Timeline = styled.div`
 `
 
 export const TimelineContainer = styled.div`
-    padding: 50px 15px 15px;
-    margin-right: auto;
-    margin-left: auto;
-    @media (min-width: 768px) {
-            min-width: 750px;
-            width: 90%;
-        }
+  padding: 50px 15px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    min-width: 750px;
+    width: 90%;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+  @media screen and (max-width: 768px) {
+    & {
+      padding-left: 0;
     }
-    @media (min-width: 1200px) {
-        width: 1170px;
-    }
-    @media screen and (max-width: 768px) {
-        & {
-            padding-left: 0px;
-        }
-    }
-    &:before {
-        content: " ";
-        display: table;
-    }
+  }
+  &:before {
+    content: ' ';
+    display: table;
+  }
 `
 
 export const TimelineItem = styled.div`
@@ -131,7 +130,7 @@ export const TimelineContent = styled.div`
   }
   & > .description li p,
   & > .description li {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   & > .description p,
   & > .description ul,
@@ -195,7 +194,7 @@ export const TimelineDot = styled.div`
     margin: 5px 0 10px;
   }
   & > img {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   @media screen and (max-width: 768px) {
     left: 35px;

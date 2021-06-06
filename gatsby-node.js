@@ -47,6 +47,7 @@ exports.onCreateWebpackConfig = function({ actions }) {
                 "@i18n": path.resolve(__dirname, 'src/i18n'),
                 "@layout": path.resolve(__dirname, 'src/layout'),
                 "@templates": path.resolve(__dirname, 'src/templates'),
+                "@custom-types": path.resolve(__dirname, 'src/types'),
                 "@utils": path.resolve(__dirname, 'src/utils'),
             }
         }

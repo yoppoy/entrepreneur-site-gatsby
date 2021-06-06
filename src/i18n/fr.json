@@ -1,7 +1,7 @@
 {
-  "jobTitle": "Développeur full stack JS",
+  "job_title": "Développeur full stack JS",
   "profile": "Mon profil",
-  "sectionSkills": "Mes compétences",
-  "sectionTimeline": "Mon expérience professionnelle",
-  "sectionContact": "Me contacter"
+  "section_skills.title": "Mes compétences",
+  "section_timeline.title": "Mon expérience professionnelle",
+  "section_contact.title": "Me contacter"
 }

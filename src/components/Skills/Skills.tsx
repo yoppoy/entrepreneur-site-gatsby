@@ -2,39 +2,40 @@ import React, { FC } from 'react'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useTranslation } from 'react-i18next'
-import { Fade } from 'react-reveal'
+import Fade from 'react-reveal/Fade'
+
+import { HomePageSkillsCard } from '@custom-types/contentfulSimplifiedTypes'
 
 import SectionTitle from '@components/_shared/SectionTitle'
 
 import './ProgressBar.css'
-import * as Styled from './index.styled'
 import Skill from './Skill'
+import * as Styled from './Skills.styled'
 
 type SkillsProps = {
-  edges: any /* @todo - graphql codegen */
+  cards: Array<HomePageSkillsCard>
 }
 
-const Skills: FC<SkillsProps> = ({ edges }) => {
+const Skills: FC<SkillsProps> = ({ cards }) => {
   const { t } = useTranslation()
 
   return (
     <Styled.Wrapper id="skills">
       <SectionTitle style={{ marginBottom: 50 }}>
-        {t('sectionSkills')}
+        {t('section_skills.title')}
       </SectionTitle>
       <Styled.CardWrapper>
-        {edges.map((skillCard: any, index: number) => {
+        {cards.map((skillCard, index) => {
           return (
-            <Styled.Card key={skillCard.node.id}>
+            <Styled.Card key={skillCard.id}>
               <Fade ssrReveal bottom delay={index * 100} distance="100px">
                 <div>
-                  <span className={skillCard.node.icon} />
-                  {documentToReactComponents(
-                    JSON.parse(skillCard.node.title.raw)
-                  )}
+                  {skillCard.icon && <span className={skillCard.icon} />}
+                  {skillCard?.title?.raw &&
+                    documentToReactComponents(JSON.parse(skillCard.title.raw))}
                   <div>
-                    {skillCard.node.data.map((skill: any) => (
-                      <Skill key={skill.name} {...skill} />
+                    {skillCard?.data?.map((skill) => (
+                      <Skill key={skill?.name || ''} {...skill} />
                     ))}
                   </div>
                 </div>

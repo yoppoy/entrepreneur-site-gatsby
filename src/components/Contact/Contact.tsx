@@ -3,29 +3,30 @@ import React, { FC } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useTranslation } from 'react-i18next'
 
+import { HomePageContact } from '@custom-types/contentfulSimplifiedTypes'
+
 import SectionTitle from '../_shared/SectionTitle'
 import * as Styled from './Contact.styled'
 
 type ContactProps = {
-  edges: any /* @todo - graphql-codegen */
+  contacts: Array<HomePageContact>
 }
 
-const Contact: FC<ContactProps> = ({ edges }) => {
+const Contact: FC<ContactProps> = ({ contacts }) => {
   const { t } = useTranslation()
 
   return (
     <section id="contact">
       <Styled.Container>
-        <SectionTitle>{t('sectionContact')}</SectionTitle>
+        <SectionTitle>{t('section_contact.title')}</SectionTitle>
         <Styled.FieldContainer>
-          {edges.map((contact: any /* @todo graphql-codegen */) => (
-            <Styled.Field key={contact.node.id}>
-              <Styled.FieldIcon className={contact.node.icon} />
+          {contacts.map((contact) => (
+            <Styled.Field key={contact.id}>
+              {contact.icon && <Styled.FieldIcon className={contact.icon} />}
               <Styled.FieldValue>
-                <Styled.FieldHeading>
-                  {contact.node.heading}
-                </Styled.FieldHeading>
-                {documentToReactComponents(JSON.parse(contact.node.value.raw))}
+                <Styled.FieldHeading>{contact.heading}</Styled.FieldHeading>
+                {contact?.value?.raw &&
+                  documentToReactComponents(JSON.parse(contact.value.raw))}
               </Styled.FieldValue>
             </Styled.Field>
           ))}

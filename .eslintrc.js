@@ -62,7 +62,15 @@ module.exports = {
             group: 'external',
             position: 'before'
           }, {
+            pattern: "@custom-types/**",
+            group: "internal",
+            position: "before"
+          }, {
             pattern: "@static**",
+            group: "internal",
+            position: "after"
+          }, {
+            pattern: "@components/_shared**",
             group: "internal",
             position: "after"
           }, {

@@ -1,4 +1,8 @@
-const getCustomIcon = (name: string): NodeRequire | null => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const require: any
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getCustomIcon = (name?: string): any | null => {
   if (name) {
     try {
       // eslint-disable-next-line @typescript-eslint/no-var-requires,import/no-dynamic-require,global-require
@@ -7,8 +11,6 @@ const getCustomIcon = (name: string): NodeRequire | null => {
 
       if (icon) return icon
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e)
       return null
     }
   }

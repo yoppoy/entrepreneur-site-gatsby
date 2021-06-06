@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { Link } from 'gatsby'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
-import EnFlag from '@static/assets/icons/flags/en.svg'
-import FrFlag from '@static/assets/icons/flags/fr.svg'
+import EnFlag from './en.svg'
+import FrFlag from './fr.svg'
+
+enum SUPPORTED_LANGUAGES {
+  'FRENCH' = 'fr',
+  'ENGLISH' = 'en'
+}
 
 const FLAG_MATCHER = {
-  fr: FrFlag,
-  en: EnFlag
+  [SUPPORTED_LANGUAGES.FRENCH]: FrFlag,
+  [SUPPORTED_LANGUAGES.ENGLISH]: EnFlag
 }
 
 const Header = styled.div`
@@ -26,9 +31,12 @@ const Img = styled.img`
   margin: 0;
 `
 
-export default function HeaderCustom() {
+const HeaderCustom: FC = () => {
   const { i18n } = useTranslation()
-  const changeLng = i18n.language === 'fr' ? 'en' : 'fr'
+  const changeLng =
+    i18n.language === SUPPORTED_LANGUAGES.FRENCH
+      ? SUPPORTED_LANGUAGES.ENGLISH
+      : SUPPORTED_LANGUAGES.FRENCH
 
   return (
     <Header>
@@ -38,3 +46,5 @@ export default function HeaderCustom() {
     </Header>
   )
 }
+
+export default HeaderCustom

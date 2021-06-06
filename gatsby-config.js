@@ -1,5 +1,4 @@
 const urljoin = require("url-join");
-const path = require("path");
 const dotenv = require("dotenv");
 const config = require("./data/SiteConfig");
 
@@ -37,7 +36,6 @@ module.exports = {
                         {
                             family: 'Montserrat',
                             variants: ["400", "700"],
-                            subsets: ['latin'],
                             subsets: ['latin']
                         },
                     ],
@@ -47,6 +45,12 @@ module.exports = {
                 usePreload: true,
                 usePreconnect: false,
             },
+        },
+        {
+            resolve: "gatsby-plugin-styled-components",
+            options: {
+                fileName: false,
+            }
         },
         "gatsby-plugin-lodash",
         {
