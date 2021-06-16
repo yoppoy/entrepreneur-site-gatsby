@@ -1,7 +1,8 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    sourceType: "module",
+    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
+    sourceType: "module", // Allows for the use of imports
     project: "./tsconfig.json",
     ecmaFeatures: {
       jsx: true
@@ -14,10 +15,9 @@ module.exports = {
   extends: [
     "airbnb",
     "airbnb/hooks",
+    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "plugin:prettier/recommended"
   ],
   plugins: ["react", "jsx-a11y", "import", "prettier", "@typescript-eslint"],
   globals: {},
@@ -89,6 +89,9 @@ module.exports = {
     ],
   },
   settings: {
+    react: {
+      version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
     'import/resolver': {
       node: {
         extensions: ['.ts', '.tsx'],

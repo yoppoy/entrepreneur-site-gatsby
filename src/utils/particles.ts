@@ -1,5 +1,7 @@
 import { ParticlesProps, HoverMode, ClickMode } from 'react-particles-js'
 
+import { isBrowser } from '@utils/index'
+
 import DockerIcon from '../../static/assets/icons/particles/docker-icon.png'
 import GatsbyIcon from '../../static/assets/icons/particles/gatsby-icon.png'
 import GraphqlIcon from '../../static/assets/icons/particles/graphql-icon.png'
@@ -29,7 +31,7 @@ const particleImages = PARTICLE_ICONS.map((image) => ({
 const particleConfig: ParticlesProps['params'] = {
   particles: {
     number: {
-      value: typeof window !== `undefined` ? window.innerWidth / 50 : 50
+      value: isBrowser ? window.innerWidth / 50 : 50
     },
     shape: {
       type: ['image'],

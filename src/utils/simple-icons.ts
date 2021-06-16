@@ -5,9 +5,8 @@ declare const require: any
 const getCustomIcon = (name?: string): any | null => {
   if (name) {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires,import/no-dynamic-require,global-require
-      const icon = require(`../../static/assets/icons/simple-icons-custom/${name}.js`)
-        .default
+      // eslint-disable-next-line @typescript-eslint/no-var-requires,import/no-dynamic-require,global-require,prettier/prettier
+      const icon = require(`../../static/assets/icons/simple-icons-custom/${name}.js`).default
 
       if (icon) return icon
     } catch (e) {

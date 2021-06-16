@@ -53,11 +53,10 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
                 <div className="et-quote" />
                 <div>
                   <h5 className="referral">
-                    {testimonial.firstName} {testimonial.lastName} -{' '}
-                    {testimonial.date}
+                    {`${testimonial.firstName} ${testimonial.lastName} - ${testimonial.date}`}
                   </h5>
                   <h5 className="referral-info">
-                    {testimonial.jobTitle} - {testimonial.companyName}
+                    {`${testimonial.jobTitle} - ${testimonial.companyName}`}
                   </h5>
                 </div>
               </Styled.TestimonialBody>

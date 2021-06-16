@@ -8,6 +8,7 @@ import { HomePageSiteConfiguration } from '@custom-types/contentfulSimplifiedTyp
 
 import { ButtonAnchor } from '@components/_shared/Button'
 import Header from '@components/Header/Header'
+import { isBrowser } from '@utils/index'
 import particleConfig from '@utils/particles'
 
 import * as Styled from './Home.styled'
@@ -50,9 +51,7 @@ const Home: FC<HomeProps> = ({ background }) => {
               <Styled.ButtonWrapper>
                 <ButtonAnchor
                   to={
-                    typeof window !== `undefined`
-                      ? `${window.location.pathname}#skills`
-                      : '#skills'
+                    isBrowser ? `${window.location.pathname}#skills` : '#skills'
                   }
                   title={t('section_skills.title')}
                 >
@@ -60,7 +59,7 @@ const Home: FC<HomeProps> = ({ background }) => {
                 </ButtonAnchor>
                 <ButtonAnchor
                   to={
-                    typeof window !== `undefined`
+                    isBrowser
                       ? `${window.location.pathname}#contact`
                       : '#contact'
                   }
@@ -73,11 +72,7 @@ const Home: FC<HomeProps> = ({ background }) => {
             </Fade>
           </Styled.DarkWrapper>
           <Styled.Scroller
-            to={
-              typeof window !== `undefined`
-                ? `${window.location.pathname}#skills`
-                : '#skills'
-            }
+            to={isBrowser ? `${window.location.pathname}#skills` : '#skills'}
           >
             <Fade ssrReveal delay={1000}>
               <span className="scroller-text">{t('profile')}</span>

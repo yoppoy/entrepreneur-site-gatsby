@@ -11,8 +11,9 @@ import {
 
 import SectionTitle from '@components/_shared/SectionTitle'
 import TimelineExperience from '@components/Timeline/TimelineExperience'
+import { isBrowser } from '@utils/index'
 
-import * as Styled from './index.styled'
+import * as Styled from './Timeline.styled'
 
 type TimelineProps = {
   experiences: Array<HomePageExperience>
@@ -21,11 +22,9 @@ type TimelineProps = {
 
 const Timeline: FC<TimelineProps> = ({ experiences, background }) => {
   const { t } = useTranslation()
-
-  const experienceLink =
-    typeof window !== `undefined`
-      ? `${window.location.pathname}#experience`
-      : '#experience'
+  const experienceLink = isBrowser
+    ? `${window.location.pathname}#experience`
+    : '#experience'
 
   return (
     <section id="experience">
@@ -37,7 +36,7 @@ const Timeline: FC<TimelineProps> = ({ experiences, background }) => {
         >
           <AnchorLink to={experienceLink} title={t('section_skills.title')}>
             <Styled.TimelineHeader>
-              <SectionTitle>{t('section_timeline')}</SectionTitle>
+              <SectionTitle>{t('section_timeline.title')}</SectionTitle>
             </Styled.TimelineHeader>
           </AnchorLink>
           <Styled.Timeline>

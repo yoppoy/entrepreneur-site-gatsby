@@ -25,11 +25,9 @@ const filterHomePageData = (data: HomePageQuery) => {
   }
 }
 
-const PageHome: FC<PageProps<
-  HomePageQuery,
-  { locale: string },
-  Record<string, unknown>
->> = ({ pageContext, data }) => {
+const PageHome: FC<
+  PageProps<HomePageQuery, { locale: string }, Record<string, unknown>>
+> = ({ pageContext, data }) => {
   const {
     siteConfiguration,
     skills,

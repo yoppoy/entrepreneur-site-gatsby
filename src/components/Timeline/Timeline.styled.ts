@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 
@@ -59,7 +60,7 @@ export const TimelineContainer = styled.div`
   }
 `
 
-export const TimelineItem = styled.div`
+export const TimelineItem = styled(motion.div)`
   width: 100%;
   margin-bottom: 30px;
   position: relative;
@@ -70,13 +71,13 @@ export const TimelineItem = styled.div`
   }
 `
 
-export const TimelineContent = styled.div`
+export const TimelineContent = styled(motion.div)`
   position: relative;
   width: 45%;
   padding: 10px 30px;
   background: #f5f5f5;
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
-  ${TimelineItem}nth-child(even) & {
+  ${TimelineItem}:nth-child(even) & {
     float: right;
     padding: 10px 30px;
   }
@@ -91,7 +92,7 @@ export const TimelineContent = styled.div`
     border-width: 10px 0 10px 15px;
     border-color: transparent transparent transparent #f5f5f5;
   }
-  ${TimelineItem}nth-child(even) &:after {
+  ${TimelineItem}:nth-child(even) &:after {
     content: '';
     position: absolute;
     border-style: solid;
@@ -143,10 +144,10 @@ export const TimelineContent = styled.div`
       width: auto;
       margin-left: 70px;
     }
-    ${TimelineItem}nth-child(even) & {
+    ${TimelineItem}:nth-child(even) & {
       float: none;
     }
-    ${TimelineItem}nth-child(odd) &:after {
+    ${TimelineItem}:nth-child(odd) &:after {
       content: '';
       position: absolute;
       border-style: solid;
@@ -163,7 +164,7 @@ export const TimelineContent = styled.div`
 export const TimelineDate = styled.div`
   line-height: 1.7;
   margin-right: -20px;
-  ${TimelineItem}nth-child(even) & {
+  ${TimelineItem}:nth-child(even) & {
     right: auto;
     left: 0;
     text-align: left;
@@ -176,7 +177,7 @@ export const TimelineDate = styled.div`
   font-size: 15px;
 `
 
-export const TimelineDot = styled.div`
+export const TimelineDot = styled(motion.div)`
   width: 30px;
   height: 30px;
   background: ${(props) => props.theme.colors.primary};
@@ -201,15 +202,15 @@ export const TimelineDot = styled.div`
   }
 `
 
-export const TimelineCompany = styled.div`
+export const TimelineCompany = styled(motion.div)`
   position: absolute;
   top: 5%;
   margin-left: 34px;
   margin-right: 34px;
-  ${TimelineItem}nth-child(odd) & {
+  ${TimelineItem}:nth-child(odd) & {
     left: 50%;
   }
-  ${TimelineItem}nth-child(even) & {
+  ${TimelineItem}:nth-child(even) & {
     right: 50%;
   }
   @media screen and (max-width: 768px) {
