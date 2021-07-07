@@ -63,3 +63,4 @@ bundle-stats.json
 .idea/**
 .DS_Store
 .history/**
+.vscode/**
